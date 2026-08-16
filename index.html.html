@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2A211A">
+<meta name="description" content="Evaluación hemodinámica escalonada y soporte vasoactivo en EHI bajo hipotermia terapéutica">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Hemo EHI">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="manifest" href="manifest.json">
+<title>CDSS Hemodinamia EHI · Soporte vasoactivo escalonado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#FBF7F0; --papel:#FFFFFF; --arena:#F3EADD; --arena2:#EADFCE;
+  --tinta:#2A211A; --tinta2:#5C4E43; --tinta3:#8C7C6E;
+  --terra:#B0491F; --terra-cl:#F6E3D7; --terra-bd:#E2BCA5;
+  --salvia:#4E7050; --salvia-cl:#E4EDE2;
+  --ambar:#B07B18; --ambar-cl:#F8ECD4;
+  --sangre:#8E2A24; --sangre-cl:#F8E0DC;
+  --pizarra:#37596B; --pizarra-cl:#E2ECF0;
+  --linea:#DFD2C0;
+  --r:14px; --rs:9px;
+  --sh:0 1px 2px rgba(42,33,26,.06), 0 6px 18px rgba(42,33,26,.06);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  background:var(--crema); color:var(--tinta);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:15.5px; line-height:1.55;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.015em;margin:0}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+/* ---------- Cabecera ---------- */
+header{
+  background:var(--tinta); color:var(--crema);
+  padding:18px 18px 14px; position:sticky; top:0; z-index:40;
+  box-shadow:0 2px 14px rgba(42,33,26,.18);
+}
+header .eyebrow{
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:#C7A98F; margin-bottom:5px;
+}
+header h1{font-size:20px; line-height:1.2; color:var(--crema)}
+header .sub{font-size:12px; color:#BCA893; margin-top:5px}
+.progress{display:flex;gap:3px;margin-top:12px}
+.progress i{flex:1;height:3px;border-radius:2px;background:#4A3D33;transition:background .25s}
+.progress i.on{background:var(--terra)}
+.progress i.done{background:#9C7F63}
+
+/* ---------- Estructura ---------- */
+main{padding:16px 14px 120px; max-width:720px; margin:0 auto}
+.card{
+  background:var(--papel); border:1px solid var(--linea); border-radius:var(--r);
+  padding:16px; margin-bottom:14px; box-shadow:var(--sh);
+}
+.card > h2{font-size:17px; margin-bottom:3px}
+.card .lead{font-size:13px; color:var(--tinta2); margin:0 0 14px}
+.step-tag{
+  display:inline-block; font-family:'JetBrains Mono',monospace; font-size:10px;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--terra);
+  background:var(--terra-cl); border:1px solid var(--terra-bd);
+  padding:3px 8px; border-radius:999px; margin-bottom:9px;
+}
+.field{margin-bottom:15px}
+.field > label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.hint{font-size:11.5px;color:var(--tinta3);font-weight:400;display:block;margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+@media(max-width:400px){.grid3{grid-template-columns:1fr 1fr}}
+
+input[type=number],input[type=text],select,textarea{
+  width:100%; padding:11px 12px; font-size:16px;
+  font-family:'JetBrains Mono',monospace;
+  border:1px solid var(--linea); border-radius:var(--rs);
+  background:var(--crema); color:var(--tinta);
+}
+select{font-family:'Inter',sans-serif;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:2.5px solid var(--terra);outline-offset:1px;border-color:transparent}
+
+/* Botones de opción */
+.opts{display:flex;flex-wrap:wrap;gap:7px}
+.opts.col{flex-direction:column}
+.opt{
+  flex:1 1 auto; min-width:88px; text-align:center; cursor:pointer;
+  padding:10px 11px; font-size:13.5px; font-weight:500;
+  border:1px solid var(--linea); border-radius:var(--rs);
+  background:var(--crema); color:var(--tinta2); transition:.14s;
+}
+.opts.col .opt{text-align:left}
+.opt:hover{border-color:var(--terra-bd)}
+.opt.sel{background:var(--terra);border-color:var(--terra);color:#fff;font-weight:600}
+.opt.sel.safe{background:var(--salvia);border-color:var(--salvia)}
+.opt.sel.warn{background:var(--ambar);border-color:var(--ambar)}
+.opt.sel.dang{background:var(--sangre);border-color:var(--sangre)}
+.opt small{display:block;font-size:11px;opacity:.78;font-weight:400;margin-top:1px}
+
+/* Cálculo en vivo */
+.calc{
+  background:var(--pizarra-cl); border:1px solid #C9DDE5; border-left:3px solid var(--pizarra);
+  border-radius:var(--rs); padding:10px 12px; margin-top:8px; font-size:12.5px;
+}
+.calc b{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--pizarra)}
+.calc .verdict{display:block;margin-top:3px;color:var(--tinta2)}
+
+/* Avisos */
+.note{border-radius:var(--rs);padding:11px 13px;font-size:12.8px;margin:10px 0;border:1px solid}
+.note b{display:block;margin-bottom:3px;font-size:12.5px}
+.note.red{background:var(--sangre-cl);border-color:#E8BDB8;color:#6E211C}
+.note.amber{background:var(--ambar-cl);border-color:#E6CE9C;color:#6E4C0C}
+.note.green{background:var(--salvia-cl);border-color:#C3D6C1;color:#33502F}
+.note.terra{background:var(--terra-cl);border-color:var(--terra-bd);color:#7C3315}
+.note.slate{background:var(--pizarra-cl);border-color:#C9DDE5;color:#26414E}
+
+/* Navegación */
+.nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:rgba(251,247,240,.96); backdrop-filter:blur(9px);
+  border-top:1px solid var(--linea);
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+  display:flex;gap:9px;max-width:720px;margin:0 auto;
+}
+.btn{
+  flex:1;padding:14px;border-radius:var(--rs);border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;
+}
+.btn.prim{background:var(--terra);color:#fff}
+.btn.sec{background:var(--arena);color:var(--tinta);border:1px solid var(--linea);flex:0 0 34%}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* ---------- Resultado ---------- */
+.pheno{
+  border-radius:var(--r); padding:16px; margin-bottom:12px;
+  border:1px solid; border-left-width:5px;
+}
+.pheno.primary{background:var(--terra-cl);border-color:var(--terra)}
+.pheno.alt{background:var(--arena);border-color:var(--arena2);border-left-color:var(--tinta3)}
+.pheno .code{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--tinta3)}
+.pheno h3{font-size:17px;margin:3px 0 6px}
+.pheno p{margin:0 0 8px;font-size:13.5px;color:var(--tinta2)}
+.confbar{height:5px;background:#fff;border-radius:3px;overflow:hidden;margin:8px 0 4px}
+.confbar i{display:block;height:100%;background:var(--terra)}
+
+.tier{border:1px solid var(--linea);border-radius:var(--r);margin-bottom:11px;overflow:hidden;background:var(--papel)}
+.tier > .head{
+  display:flex;align-items:center;gap:10px;padding:12px 14px;
+  background:var(--arena);border-bottom:1px solid var(--linea);
+}
+.tier .num{
+  flex:0 0 30px;height:30px;border-radius:8px;background:var(--tinta);color:var(--crema);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;
+}
+.tier .num.g{background:var(--salvia)} .tier .num.a{background:var(--ambar)}
+.tier .num.r{background:var(--sangre)} .tier .num.t{background:var(--terra)}
+.tier .head h4{margin:0;font-family:'Fraunces',serif;font-size:15px;font-weight:600}
+.tier .head span{display:block;font-family:'Inter',sans-serif;font-size:11.5px;color:var(--tinta2);font-weight:400}
+.tier > .body{padding:13px 14px}
+.tier ul{margin:0;padding-left:17px}
+.tier li{font-size:13.5px;margin-bottom:6px;color:var(--tinta2)}
+.tier li strong{color:var(--tinta)}
+.drug{
+  display:flex;justify-content:space-between;gap:10px;align-items:baseline;
+  padding:8px 0;border-bottom:1px dashed var(--linea);
+}
+.drug:last-child{border-bottom:none}
+.drug .n{font-size:13.5px;font-weight:600}
+.drug .n small{display:block;font-weight:400;font-size:11.5px;color:var(--tinta3)}
+.drug .d{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--terra);text-align:right;flex:0 0 auto;font-weight:600}
+
+table.ref{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}
+table.ref td{padding:6px 4px;border-bottom:1px solid var(--linea);vertical-align:top}
+table.ref td:first-child{font-family:'JetBrains Mono',monospace;color:var(--tinta3);white-space:nowrap;padding-right:10px}
+
+details{border:1px solid var(--linea);border-radius:var(--rs);margin-bottom:10px;background:var(--papel)}
+details summary{padding:12px 14px;cursor:pointer;font-weight:600;font-size:13.5px;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'＋';float:right;color:var(--terra);font-weight:400}
+details[open] summary::after{content:'−'}
+details .inner{padding:0 14px 14px;font-size:13px;color:var(--tinta2)}
+.refs{font-size:11.5px;color:var(--tinta3);line-height:1.5}
+.refs li{margin-bottom:7px}
+footer{text-align:center;font-size:11px;color:var(--tinta3);padding:6px 14px 20px;max-width:720px;margin:0 auto}
+.hidden{display:none !important}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+
+/* Modo aplicación instalada: respeta la isla dinámica y el indicador inferior */
+@media all and (display-mode:standalone){
+  header{padding-top:calc(18px + env(safe-area-inset-top))}
+}
+.acciones{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.acciones button{
+  padding:13px 10px;border-radius:var(--rs);border:1px solid var(--linea);
+  background:var(--arena);color:var(--tinta);font-family:'Inter',sans-serif;
+  font-size:13.5px;font-weight:600;cursor:pointer;
+}
+.acciones button.full{grid-column:1/-1}
+.acciones button.acc{background:var(--terra);border-color:var(--terra);color:#fff}
+.borrador{
+  font-size:11px;color:var(--tinta3);text-align:center;margin-top:9px;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* Impresión: informe limpio, sin cromo de la interfaz */
+@media print{
+  header,.nav,.acciones,.borrador,footer,.step-tag{display:none !important}
+  body{background:#fff;font-size:11pt;padding:0}
+  main{padding:0;max-width:none}
+  .card,.tier,.pheno,.note,details{
+    box-shadow:none !important;break-inside:avoid;page-break-inside:avoid;
+    border-color:#bbb !important;
+  }
+  details{border:none} details summary{display:none} details .inner{padding:0}
+  details[open] .inner, details .inner{display:block}
+  a[href]:after{content:''}
+  #informe{display:block !important}
+}
+#informe{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">CDSS Neonatal · Hemodinamia</div>
+  <h1>EHI e hipotermia terapéutica</h1>
+  <div class="sub">Evaluación escalonada y administración prudente de vasoactivos (<em>inotropic stewardship</em>)</div>
+  <div class="progress" id="prog"></div>
+</header>
+
+<main id="main"></main>
+
+<div class="nav">
+  <button class="btn sec" id="btnPrev">Atrás</button>
+  <button class="btn prim" id="btnNext">Continuar</button>
+</div>
+
+<script>
+/* ============================================================
+   CDSS Hemodinamia EHI — motor de fenotipos y escalones
+   Base: Surak et al. J Perinatol 2025 (doi 10.1038/s41372-025-02516-6)
+   + Giesinger 2017/2019 · Rios 2021 · Kovacs 2022/2025 ×2 · Yu 2026 · AAP 2026
+   ============================================================ */
+
+var S = window.S = {
+  // Contexto
+  eg:'', peso:'', horas:'', sarnat:'', fase:'',
+  // Nivel 1 clínico
+  pas:'', pad:'', pam:'', fc:'', llenado:'', diuresis:'',
+  spo2pre:'', spo2post:'', fio2:'', pmva:'', pao2:'',
+  // Nivel 2 laboratorio
+  lactato:'', ph:'', eb:'', troponina:'', tropUnit:'ngL', cortisol:'', creat:'',
+  // Nivel 3 ecocardiografía
+  ecoHecho:'', tapse:'', facvd:'', fevi:'', lvoVal:'', paat:'', rvet:'',
+  shuntDuctal:'', shuntAuricular:'', ductus:'', septum:'', precarga:'', flujoPulmonar:'', derrame:'',
+  // Nivel 4 neuromonitoreo
+  nirs:'', irACM:'', psv:'', edv:'', aeeg:'',
+  // Terapia en curso
+  dopa:0, dobu:0, epi:0, norepi:0, milri:0, vaso:0,
+  hcTotal:'', horasVaso:''
+};
+
+/* ---------------- Definición de pasos ---------------- */
+const PASOS = [
+  {id:'ctx',  tag:'Paso 1 de 7', t:'Contexto del paciente', l:'Define el momento fisiológico. Toda la lógica posterior cambia según la fase térmica.', r:renderCtx},
+  {id:'n1',   tag:'Nivel 1 · Paso 2 de 7', t:'Evaluación clínica de cabecera', l:'Los marcadores clásicos tienen mala correlación con el gasto cardíaco. Recójalos, pero no decida solo con ellos.', r:renderN1},
+  {id:'n2',   tag:'Nivel 2 · Paso 3 de 7', t:'Laboratorio y bioquímica', l:'Gases, lactato, troponina y cortisol: contexto de gravedad, no medida de flujo.', r:renderN2},
+  {id:'n3',   tag:'Nivel 3 · Paso 4 de 7', t:'Ecocardiografía dirigida', l:'El escalón que cambia la conducta. Sin este nivel el fenotipo queda en hipótesis.', r:renderN3},
+  {id:'n4',   tag:'Nivel 4 · Paso 5 de 7', t:'Neuromonitoreo y flujo cerebral', l:'Cierra el circuito: la meta no es la presión, es la perfusión cerebral adecuada.', r:renderN4},
+  {id:'tx',   tag:'Paso 6 de 7', t:'Soporte vasoactivo en curso', l:'Para calcular carga farmacológica acumulada y activar los avisos de administración prudente.', r:renderTx},
+  {id:'out',  tag:'Paso 7 de 7', t:'Fenotipo y conducta escalonada', l:'', r:renderOut}
+];
+let i = 0;
+
+/* ---------------- Utilidades ---------------- */
+const n = v => { const x = parseFloat(v); return isFinite(x) ? x : null; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function num(k, label, ph, unit, hint){
+  return `<div class="field"><label for="f_${k}">${label}${unit?` <span class="hint" style="display:inline">(${unit})</span>`:''}
+    ${hint?`<span class="hint">${hint}</span>`:''}</label>
+    <input type="number" step="any" inputmode="decimal" id="f_${k}" data-k="${k}" value="${S[k]??''}" placeholder="${ph||''}"></div>`;
+}
+function pick(k, label, opts, hint){
+  return `<div class="field"><label>${label}${hint?`<span class="hint">${hint}</span>`:''}</label>
+    <div class="opts${opts.length>3?' col':''}">${opts.map(o=>{
+      const sel = S[k]===o.v ? ` sel ${o.tone||''}` : '';
+      return `<div class="opt${sel}" role="button" tabindex="0" data-set="${k}" data-val="${o.v}">${o.l}${o.s?`<small>${o.s}</small>`:''}</div>`;
+    }).join('')}</div></div>`;
+}
+function setv(k,v){ S[k] = (S[k]===v ? '' : v); draw(); }
+
+/* ---------------- Cálculos ---------------- */
+function calcIR(){
+  const p = n(S.psv), e = n(S.edv);
+  if(p===null || e===null || p<=0) return null;
+  return (p - e) / p;
+}
+function calcOI(){
+  const f = n(S.fio2), m = n(S.pmva), p = n(S.pao2);
+  if(f===null||m===null||p===null||p<=0) return null;
+  return (f>1 ? f : f*100) * m / p;
+}
+function calcPaatRvet(){
+  const p = n(S.paat), r = n(S.rvet);
+  if(p===null||r===null||r<=0) return null;
+  return p / r;
+}
+function calcGradiente(){
+  const a = n(S.spo2pre), b = n(S.spo2post);
+  if(a===null||b===null) return null;
+  return a - b;
+}
+function calcVIS(){
+  return (S.dopa||0) + (S.dobu||0) + 100*(S.epi||0) + 100*(S.norepi||0)
+       + 10*(S.milri||0) + 10000*(S.vaso||0);
+}
+function pamEsperada(){ const e = n(S.eg); return e ? e : null; }
+
+/* Troponina T de alta sensibilidad. Todo se normaliza a ng/L (1 ng/mL = 1000 ng/L).
+   Ventana mejor estudiada: 2–6 h de vida; el pico ocurre hacia las 48–72 h. */
+/* PAAT y RVET dependen de la edad posnatal (el PAAT sube rápido al caer la
+   resistencia pulmonar) y de la frecuencia cardíaca. Por eso se interpreta el
+   cociente, no el PAAT aislado, y con umbrales por edad. */
+const PAAT_REF = [
+  {h:0.5, et:'30 minutos',  paat:'33 ± 4',    rvet:'166 ± 21'},
+  {h:2.5, et:'2–3 horas',   paat:'35 ± 4',    rvet:'186 ± 21'},
+  {h:9,   et:'8–10 horas',  paat:'42 ± 5',    rvet:'208 ± 13'},
+  {h:23,  et:'22–24 horas', paat:'55 ± 7',    rvet:'216 ± 18'},
+  {h:24,  et:'24 h (otra cohorte)', paat:'65,7 ± 13,2', rvet:'210,5 ± 34,8'},
+  {h:48,  et:'48 horas',    paat:'71,5 ± 15,7', rvet:'211,8 ± 35,1'}
+];
+function paatEsperado(){
+  const h = n(S.horas);
+  if(h===null) return null;
+  let best = PAAT_REF[0];
+  for(const r of PAAT_REF){ if(Math.abs(r.h-h) < Math.abs(best.h-h)) best = r; }
+  return best;
+}
+function paatUmbral(){
+  const h = n(S.horas), eg = n(S.eg);
+  if(eg!==null && eg<34){
+    return (h!==null && h>48)
+      ? {sev:0.22, mod:0.28, ctx:'prematuro, después de las 48 h', norm:'≈ 0,29 en los días 5–7'}
+      : {sev:0.18, mod:0.24, ctx:'prematuro, primeras 48 h', norm:'≈ 0,25 el día 1 y 0,26 el día 2'};
+  }
+  if(h===null) return {sev:0.25, mod:0.30, ctx:'edad posnatal no registrada, se aplican los umbrales más estrictos',
+                       norm:'≥ 0,30–0,31 tras la transición, pero 0,19–0,25 puede ser fisiológico en las primeras horas. Registre las horas de vida para afinar esta lectura'};
+  if(h < 12) return {sev:0.15, mod:0.18, ctx:'transición, primeras 12 h', norm:'0,19–0,21 es lo esperable a esta edad'};
+  if(h < 36) return {sev:0.19, mod:0.24, ctx:'primer día', norm:'0,25–0,31 hacia las 24 h, con variación real entre cohortes'};
+  if(h < 72) return {sev:0.22, mod:0.28, ctx:'segundo y tercer día', norm:'≈ 0,34 hacia las 48 h'};
+  return {sev:0.25, mod:0.30, ctx:'tras la transición', norm:'≥ 0,30–0,31 es tranquilizador'};
+}
+function paatVerdict(pr){
+  const u = paatUmbral();
+  if(pr < u.sev) return ['red','Presión pulmonar severamente elevada para la edad', u];
+  if(pr < u.mod) return ['amber','Presión pulmonar elevada para la edad', u];
+  return ['green','Sin datos de presión pulmonar elevada por este índice', u];
+}
+
+function tropNgL(){
+  const v = n(S.troponina);
+  if(v===null) return null;
+  return S.tropUnit==='ngmL' ? v*1000 : v;
+}
+function tropBanda(t){
+  if(t < 100) return ['green','Compatible con transición normal',
+    'En el término sano la mediana al nacimiento es de 34–38 ng/L y el percentil 97,5–99 ronda 83–88 ng/L. Por debajo de 80–100 ng/L no hay indicio de lesión miocárdica relevante, aunque hay superposición con la EHI leve.'];
+  if(t < 200) return ['amber','Zona gris',
+    'Frecuente en EHI leve a moderada. El corte descrito para disfunción miocárdica ecocardiográfica es 114,5 ng/L. En cohortes de EHI moderada-grave, el 84 % superaba 100 ng/L a las 2–4 h.'];
+  if(t < 400) return ['terra','Compromiso miocárdico significativo',
+    'Habitual en EHI moderada (mediana 173 ng/L) y grave (mediana 263 ng/L). Los cortes descritos para mortalidad rondan 190 ng/L (sensibilidad 82 %, especificidad 80 %) y 250,5 ng/L.'];
+  return ['red','Lesión miocárdica grave',
+    'Los fallecidos tuvieron mediana de 407 ng/L frente a 168 ng/L en supervivientes. Piense en shock, hipertensión pulmonar persistente o disfunción ventricular franca. Confirme con ecocardiografía.'];
+}
+const TROP_ESPERADA = {
+  '':       ['sin estadio seleccionado','—'],
+  leve:     ['EHI leve','70 ± 30 ng/L'],
+  moderada: ['EHI moderada','120 ± 70 ng/L'],
+  severa:   ['EHI grave','340 ± 210 ng/L']
+};
+function cortBanda(c){
+  if(c < 5)  return ['red','Muy sugestivo de insuficiencia corticosteroidea en shock refractario',
+    'Por debajo de 5 µg/dL (138 nmol/L). En el ensayo CORTISoL el cortisol basal mediano de los pacientes tratados fue de 3,3–3,5 µg/dL.'];
+  if(c < 15) return ['amber','Inapropiadamente bajo si hay shock',
+    'Por debajo de 15 µg/dL (414 nmol/L), el umbral usado como “inapropiadamente bajo” en el neonato con shock. Sostiene la hidrocortisona <strong>solo</strong> si hay hipotensión con mala perfusión resistente al soporte.'];
+  return ['green','Por encima del umbral de shock',
+    'El rango orientativo del término sano en las primeras 24 h es 7–25 µg/dL (200–700 nmol/L). Se han descrito más efectos adversos al dar hidrocortisona sin insuficiencia suprarrenal.'];
+}
+
+/* ============================================================
+   MOTOR DE FENOTIPOS
+   ============================================================ */
+const FENOTIPOS = {
+  ADAPT:{
+    nom:'Adaptación fisiológica a la hipotermia',
+    res:'Bradicardia sinusal y gasto cardíaco reducido proporcionales al descenso metabólico, con perfusión conservada. No es un fenotipo patológico.',
+    color:'green'
+  },
+  HIPOVOL:{
+    nom:'Precarga insuficiente',
+    res:'Ventrículos subllenos con contractilidad conservada. El miocardio asfixiado tolera mal la sobrecarga: corrija con cautela y reevalúe tras cada bolo.',
+    color:'amber'
+  },
+  VASO:{
+    nom:'Vasoplejía · resistencia vascular sistémica baja',
+    res:'Hipotensión con gasto cardíaco normal o alto, extremidades calientes y presión diastólica desplomada. Típica del recalentamiento y de la insuficiencia suprarrenal relativa.',
+    color:'amber'
+  },
+  HP_A:{
+    nom:'Hipertensión pulmonar aguda · función VD preservada o levemente deprimida · ductus no restrictivo',
+    res:'El ductus actúa de válvula de escape del VD. El problema dominante es la poscarga pulmonar y la hipoxemia, no la contractilidad.',
+    color:'terra'
+  },
+  HP_B:{
+    nom:'Hipertensión pulmonar aguda · función cardíaca significativamente deprimida · ductus restrictivo',
+    res:'El VD enfrenta poscarga elevada sin escape ductal y con contractilidad comprometida. Fenotipo de alto riesgo de colapso.',
+    color:'red'
+  },
+  HP_C:{
+    nom:'Hipertensión pulmonar aguda con ductus cerrado',
+    res:'El VD trabaja contra resistencia pulmonar alta sin ninguna vía de descompresión. La reapertura ductal entra en la conversación.',
+    color:'red'
+  },
+  AFVP:{
+    nom:'Atresia o estenosis funcional de la válvula pulmonar',
+    res:'El VD no genera presión suficiente para abrir la pulmonar. El flujo pulmonar depende del ductus: aquí la prostaglandina es fisiología, no rescate.',
+    color:'red'
+  },
+  VD:{
+    nom:'Disfunción ventricular derecha predominante',
+    res:'El VD es la cámara más vulnerable tras la asfixia: geometría en media luna, relación radio/espesor alta y perfusión coronaria precaria. Su función es el marcador pronóstico más consistente.',
+    color:'terra'
+  },
+  BIVENT:{
+    nom:'Disfunción biventricular',
+    res:'Miocardiopatía isquémica global postasfíctica. Considere además insuficiencia suprarrenal concurrente.',
+    color:'red'
+  },
+  VI:{
+    nom:'Disfunción ventricular izquierda predominante',
+    res:'Gasto sistémico bajo con congestión venosa pulmonar. El óxido nítrico inhalado puede empeorar el cuadro al aumentar el retorno venoso pulmonar hacia una aurícula izquierda hipertensa.',
+    color:'red'
+  },
+  HIPERPERF:{
+    nom:'Hiperperfusión · reperfusión desregulada',
+    res:'Gasto cardíaco elevado, flujo cerebral aumentado, índice de resistencia bajo o saturación regional cerebral alta. Aquí el riesgo no es tratar poco, sino tratar de más.',
+    color:'red'
+  },
+  ESTABLE:{
+    nom:'Sin compromiso hemodinámico definido',
+    res:'Los datos disponibles no sostienen un fenotipo de compromiso circulatorio. Vigile en serie: el fenotipo cambia con la fase térmica.',
+    color:'green'
+  }
+};
+
+function motor(){
+  const sc = {}; const ev = {};
+  const add = (k, p, r) => { sc[k]=(sc[k]||0)+p; (ev[k]=ev[k]||[]).push(r); };
+
+  const tapse = n(S.tapse), facvd = n(S.facvd), fevi = n(S.fevi), lvo = n(S.lvoVal);
+  const pr = calcPaatRvet(), ir = calcIR(), grad = calcGradiente(), oi = calcOI();
+  const pam = n(S.pam), pad = n(S.pad), pamObj = pamEsperada();
+
+  // El aplanamiento septal marca sobrecarga de PRESIÓN del VD, no disfunción sistólica:
+  // pesa en el eje de hipertensión pulmonar, no en el de contractilidad.
+  const vdMal = (tapse!==null && tapse<6) || (facvd!==null && facvd<29);
+  const viMal = (fevi!==null && fevi<45) || (lvo!==null && lvo<150);
+  const hpEco = S.shuntDuctal==='dcha_izq' || S.shuntDuctal==='bidireccional'
+             || (pr!==null && pr < paatUmbral().mod) || S.septum==='aplanado' || S.shuntAuricular==='dcha_izq';
+  const hipoTA = (pam!==null && pamObj!==null && pam < pamObj);
+
+  /* --- Adaptación fisiológica --- */
+  if(S.fase==='enfriamiento' && S.llenado==='menor3' && S.diuresis!=='oliguria'
+     && !vdMal && !viMal && (n(S.lactato)===null || n(S.lactato)<3)){
+    add('ADAPT', 5, 'Fase de enfriamiento con perfusión conservada, lactato no elevado y función biventricular sin datos de deterioro');
+  }
+  if(S.fase==='enfriamiento' && n(S.fc)!==null && n(S.fc)<100 && S.llenado==='menor3'){
+    add('ADAPT', 3, 'Bradicardia esperable: la hipotermia reduce el metabolismo y con ello la frecuencia y el gasto');
+  }
+
+  /* --- Precarga --- */
+  if(S.precarga==='baja'){ add('HIPOVOL', 5, 'Cavidades subllenas en la ecocardiografía'); }
+  if(S.precarga==='baja' && !vdMal && !viMal){ add('HIPOVOL', 3, 'Contractilidad conservada con cavidades vacías'); }
+
+  /* --- Vasoplejía --- */
+  if(hipoTA && pad!==null && pad<25 && !viMal && !vdMal){
+    add('VASO', 5, 'Presión diastólica desplomada con contractilidad conservada');
+  }
+  if(S.fase==='recalentamiento' && hipoTA){
+    add('VASO', 4, 'El recalentamiento provoca vasodilatación periférica y caída de la resistencia vascular sistémica');
+  }
+  const cor = n(S.cortisol);
+  if(cor!==null && cor<5 && hipoTA){
+    add('VASO', 5, `Cortisol ${cor} µg/dL: muy sugestivo de insuficiencia corticosteroidea en shock refractario`);
+  } else if(cor!==null && cor<15 && hipoTA){
+    add('VASO', 3, `Cortisol ${cor} µg/dL: inapropiadamente bajo para un neonato en shock (umbral 15 µg/dL)`);
+  }
+  if(lvo!==null && lvo>250 && hipoTA){ add('VASO', 3, 'Gasto izquierdo alto con presión baja'); }
+
+  /* --- Hipertensión pulmonar --- */
+  if(hpEco){
+    if(S.ductus==='no_restrictivo'){
+      if(vdMal) add('HP_B', 3, 'Datos de hipertensión pulmonar con función VD deprimida');
+      else add('HP_A', 6, 'Hipertensión pulmonar con función VD preservada y ductus permeable no restrictivo');
+    }
+    if(S.ductus==='restrictivo'){
+      if(vdMal || viMal) add('HP_B', 7, 'Hipertensión pulmonar, ductus restrictivo y contractilidad deprimida');
+      else add('HP_A', 3, 'Hipertensión pulmonar con ductus restrictivo pero contractilidad conservada');
+    }
+    if(S.ductus==='cerrado'){ add('HP_C', 7, 'Hipertensión pulmonar sin ductus permeable: el VD no tiene válvula de escape'); }
+  }
+  if(grad!==null && grad>=10){ add('HP_A', 3, `Gradiente preductal-posductal de ${grad} puntos: cortocircuito derecha-izquierda por el ductus`); }
+  if(oi!==null && oi>=20){ add('HP_A', 2, `Índice de oxigenación ${oi.toFixed(0)}: falla respiratoria hipoxémica`); }
+  if(pr!==null){
+    const u = paatUmbral();
+    if(pr < u.sev) add('HP_A', 2, `Cociente PAAT/RVET ${pr.toFixed(2)}: presión pulmonar severamente elevada para el contexto (${u.ctx})`);
+    else if(pr < u.mod) add('HP_A', 1, `Cociente PAAT/RVET ${pr.toFixed(2)}: elevada para el contexto (${u.ctx}); ${u.norm}`);
+  }
+  if(S.fase==='enfriamiento' && hpEco){ add('HP_A', 1, 'La hipotermia eleva el tono vascular pulmonar (~1 % por cada °C de descenso)'); }
+
+  /* --- Atresia funcional --- */
+  if(S.shuntDuctal==='dcha_izq' && S.flujoPulmonar==='ausente'){
+    add('AFVP', 8, 'Sin flujo anterógrado por la válvula pulmonar con cortocircuito ductal derecha-izquierda');
+  }
+
+  /* --- Disfunción ventricular --- */
+  if(vdMal && !viMal){ add('VD', 6, `Función VD deprimida${tapse!==null?` (TAPSE ${tapse} mm)`:''}${facvd!==null?`, FAC VD ${facvd} %`:''}`); }
+  if(vdMal && viMal){ add('BIVENT', 7, 'Deterioro simultáneo de ambos ventrículos por interdependencia ventricular'); }
+  if(viMal && !vdMal){ add('VI', 6, `Función VI deprimida${fevi!==null?` (FEVI ${fevi} %)`:''}${lvo!==null?`, gasto izquierdo ${lvo} mL/kg/min`:''}`); }
+  if(viMal && S.shuntAuricular==='izq_dcha' && hpEco){ add('VI', 2, 'Patrón sugerente de hipertensión pulmonar poscapilar'); }
+  const trp = tropNgL();
+  const diana = vdMal&&viMal ? 'BIVENT' : (vdMal ? 'VD' : 'VI');
+  if(trp!==null && trp>114.5 && (vdMal||viMal)){
+    add(diana, 2, `Troponina T ${Math.round(trp)} ng/L: por encima del corte de 114,5 ng/L asociado a disfunción miocárdica ecocardiográfica`);
+  }
+  if(trp!==null && trp>250 && (vdMal||viMal)){
+    add(diana, 1, 'Troponina en el rango descrito como asociado a mortalidad en las cohortes de EHI');
+  }
+
+  /* --- Hiperperfusión --- */
+  if(ir!==null && ir<0.55){ add('HIPERPERF', 5, `Índice de resistencia ${ir.toFixed(2)}: perfusión de lujo por fallo de autorregulación`); }
+  if(S.nirs==='alto'){ add('HIPERPERF', 4, 'Saturación regional cerebral elevada: baja extracción de oxígeno, marcador pronóstico adverso'); }
+  if(S.fase==='recalentamiento' && lvo!==null && lvo>250){ add('HIPERPERF', 4, 'Gasto cardíaco elevado durante el recalentamiento, asociado a neuroimagen anormal'); }
+  if(S.fase==='post' && lvo!==null && lvo>250){ add('HIPERPERF', 3, 'Gasto elevado tras el recalentamiento'); }
+
+  const lista = Object.keys(sc).sort((a,b)=>sc[b]-sc[a]);
+  if(!lista.length) return [{k:'ESTABLE', p:1, ev:['No se identificaron datos que sostengan un fenotipo de compromiso']}];
+  const max = sc[lista[0]];
+  return lista.slice(0,3).map(k => ({k, p:sc[k], conf:Math.round(100*sc[k]/max), ev:ev[k]}));
+}
+
+/* ============================================================
+   ESCALONES TERAPÉUTICOS POR FENOTIPO
+   ============================================================ */
+function escalones(f){
+  const base = {
+    ADAPT:[
+      {n:'0', tone:'g', t:'No trate un número', s:'Conducta activa de no intervención',
+       items:['La hipotermia reduce el gasto y la frecuencia de forma proporcional al descenso metabólico. Con perfusión adecuada, esto <strong>no se corrige</strong>.',
+              'Buena parte del uso aparentemente mayor de inotrópicos en niños enfriados refleja lentitud del equipo para retirarlos, no necesidad fisiológica real.',
+              'Documente perfusión, diuresis, lactato y estado ácido-base cada 6–8 h.']},
+      {n:'1', tone:'t', t:'Optimice antes de escalar', s:'Causas reversibles',
+       items:['Presión media de la vía aérea excesiva que reduce el retorno venoso.',
+              'Sedación o analgesia con efecto vasodilatador.',
+              'Calcio iónico, magnesio, glucemia y hematocrito.',
+              'Neumotórax, taponamiento, convulsiones.']}
+    ],
+    HIPOVOL:[
+      {n:'1', tone:'a', t:'Volumen con freno de mano', s:'Bolo pequeño, reevaluación obligada',
+       items:['<strong>Solución salina 0,9 % 10 mL/kg en 30–60 min.</strong> Máximo 10–20 mL/kg totales.',
+              'El miocardio asfixiado tolera mal la sobrecarga: reevalúe con ecocardiografía tras <em>cada</em> bolo, no tras la serie completa.',
+              'Si tras el segundo bolo no hay respuesta, deje de dar volumen y busque otro fenotipo.',
+              'Descarte hemorragia suprarrenal y pérdidas insensibles como causa.']},
+      {n:'2', tone:'t', t:'Si persiste tras la corrección', s:'Reevalúe el fenotipo',
+       items:['La ausencia de respuesta a volumen es información: no es hipovolemia sino disfunción o vasoplejía.']}
+    ],
+    VASO:[
+      {n:'1', tone:'a', t:'Rellene el continente antes de apretarlo', s:'Especialmente durante el recalentamiento',
+       items:['Durante el recalentamiento conviene <strong>cebar la circulación con volumen</strong> antes de subir inotrópicos de forma automática.',
+              'Recaliente lento: no más de 0,5 °C por hora.']},
+      {n:'2', tone:'t', t:'Vasopresor si persiste', s:'Con precaución extrema por reperfusión',
+       drugs:[['Noradrenalina','vasoconstrictor con menor efecto pulmonar','0,05–0,3 µg/kg/min'],
+              ['Vasopresina','útil si hay hipertensión pulmonar concomitante','0,0002–0,001 U/kg/min'],
+              ['Adrenalina','a dosis baja, efecto inotrópico predominante','< 0,04 µg/kg/min']],
+       items:['El uso agresivo de vasoconstrictores sistémicos en esta fase aumenta la poscarga y puede promover lesión por isquemia-reperfusión.']},
+      {n:'3', tone:'r', t:'Hidrocortisona si hay resistencia a volumen', s:'Dosis mínima, duración mínima',
+       drugs:[['Hidrocortisona en EHI','el único régimen estudiado en esta población (ensayo CORTISoL)','0,5 mg/kg IV cada 6 h'],
+              ['Crisis suprarrenal verdadera','dosis de rescate, luego protocolo endocrinológico local','2 mg/kg IV o IM de inmediato'],
+              ['Reemplazo fisiológico confirmado','≈ 10 mg/m²/día repartidos en 3–4 dosis','0,2–0,3 mg/kg cada 8 h']],
+       items:['<strong>La indicación es clínica, no analítica:</strong> shock o mala perfusión resistente al soporte, valorados con puntuación vasoactiva, lactato y ecocardiografía funcional. Un cortisol bajo aislado en un paciente estable <strong>no</strong> justifica hidrocortisona profiláctica.',
+              'En el ensayo elevó la presión arterial media y redujo el requerimiento de inotrópicos; el cortisol basal mediano de los tratados era de 3,3–3,5 µg/dL.',
+              'Extraiga cortisol y ACTH antes de la primera dosis, siempre que no retrase el tratamiento. Evítela si el cortisol supera 15 µg/dL.',
+              '<strong>Techo de exposición:</strong> por cada mg/kg de dosis acumulada, las probabilidades de resultado cognitivo adverso aumentaron un 16 %, con punto de corte en <strong>5,6 mg/kg</strong>. No prueba causalidad, pero favorece la menor dosis y duración eficaces. Suspenda en cuanto se estabilice la presión.']}
+    ],
+    HP_A:[
+      {n:'1', tone:'t', t:'Pulmón antes que fármaco', s:'La poscarga pulmonar se trata ventilando bien',
+       items:['Reclutamiento alveolar, capacidad residual funcional óptima, surfactante si hay enfermedad parenquimatosa.',
+              'Sedación y analgesia adecuadas.',
+              'Objetivo de saturación preductal <strong>90–95 %</strong>. Evite tanto la hipoxemia como la hiperoxia.',
+              'Normocapnia estricta: la hipocapnia reduce el flujo cerebral y la hipercapnia eleva la resistencia pulmonar.']},
+      {n:'2', tone:'t', t:'Óxido nítrico inhalado', s:'Si persiste la falla hipoxémica',
+       drugs:[['Óxido nítrico inhalado','vasodilatador pulmonar selectivo','20 ppm de inicio']],
+       items:['Optimice el cociente resistencia sistémica/pulmonar antes de añadir más catecolaminas.']},
+      {n:'3', tone:'a', t:'Soporte del VD si aparece disfunción', s:'Inotrópico, no vasoconstrictor',
+       drugs:[['Dobutamina','inotrópico de elección','2,5–7,5 µg/kg/min'],
+              ['Adrenalina','a dosis baja','< 0,04 µg/kg/min']],
+       items:['La prostaglandina puede considerarse si el ductus empieza a hacerse restrictivo y el VD lo necesita como válvula de escape.']}
+    ],
+    HP_B:[
+      {n:'1', tone:'r', t:'Sostenga la contractilidad del VD', s:'Prioridad absoluta',
+       drugs:[['Dobutamina','inotrópico sin aumento brusco de la presión media','2,5–7,5 µg/kg/min'],
+              ['Adrenalina','dosis baja para soporte biventricular','< 0,04 µg/kg/min']],
+       items:['<strong>Evite la dopamina a dosis altas:</strong> induce taquicardia (que acorta el tiempo de relajación y deteriora el rendimiento) y eleva el cociente presión pulmonar/presión sistémica.']},
+      {n:'2', tone:'r', t:'Reduzca la poscarga pulmonar', s:'Con vigilancia del VI',
+       drugs:[['Óxido nítrico inhalado','','20 ppm'],
+              ['Milrinona','solo con buena diuresis y sin hipotensión sistémica','0,25–0,5 µg/kg/min, sin bolo']],
+       items:['La milrinona en hipotermia se acumula por aclaramiento renal reducido y provoca caída marcada de la presión diastólica. Si la usa, hágalo sin dosis de carga y con vigilancia estrecha.']},
+      {n:'3', tone:'r', t:'Abra la válvula de escape', s:'Ductus restrictivo con VD en falla',
+       drugs:[['Prostaglandina E1','reabre o mantiene el ductus como descompresión del VD','0,01–0,02 µg/kg/min']],
+       items:['Considere hidrocortisona si hay resistencia a volumen y vasopresores.',
+              'Si continúa el deterioro: valore ECMO y, excepcionalmente, suspender la hipotermia.']}
+    ],
+    HP_C:[
+      {n:'1', tone:'r', t:'Reabra el ductus', s:'El VD carece de descompresión',
+       drugs:[['Prostaglandina E1','poco útil si lleva mucho tiempo cerrado','0,01–0,02 µg/kg/min']],
+       items:['Inicie óxido nítrico inhalado en paralelo para aliviar la resistencia pulmonar.']},
+      {n:'2', tone:'r', t:'Soporte inotrópico del VD', s:'',
+       drugs:[['Dobutamina','','2,5–7,5 µg/kg/min'],
+              ['Adrenalina','dosis baja','< 0,04 µg/kg/min'],
+              ['Milrinona','ayuda a la relajación del VD si no hay hipotensión y hay buena diuresis','0,25–0,5 µg/kg/min']]},
+      {n:'3', tone:'r', t:'Hipertrofia del VD con taquicardia', s:'Situación excepcional',
+       items:['Asegure llenado adecuado. El control de frecuencia con esmolol se ha descrito, pero los betabloqueantes pueden agravar la depresión miocárdica: extreme la cautela.']}
+    ],
+    AFVP:[
+      {n:'1', tone:'r', t:'Prostaglandina', s:'El flujo pulmonar depende del ductus',
+       drugs:[['Prostaglandina E1','aporta flujo pulmonar, aumenta la presión en aurícula izquierda y reduce el cortocircuito auricular','0,01–0,02 µg/kg/min']]},
+      {n:'2', tone:'r', t:'Llenado y soporte del VD', s:'',
+       drugs:[['Dobutamina','','2,5–7,5 µg/kg/min'],
+              ['Adrenalina','dosis baja','< 0,04 µg/kg/min'],
+              ['Óxido nítrico inhalado','alivia la resistencia pulmonar','20 ppm']],
+       items:['Asegure precarga adecuada, sobre todo si hay hipertrofia del VD.']}
+    ],
+    VD:[
+      {n:'1', tone:'t', t:'Inotrópico dirigido al VD', s:'Sin subir bruscamente la presión media',
+       drugs:[['Dobutamina','primera línea en los centros con ecocardiografía dirigida','2,5–7,5 µg/kg/min'],
+              ['Adrenalina','dosis baja como alternativa','< 0,04 µg/kg/min']],
+       items:['La función del VD es el marcador ecocardiográfico más consistente de pronóstico: TAPSE &lt; 6 mm y FAC VD &lt; 29 % se asocian a muerte o neuroimagen anormal.',
+              'El punto más bajo de función VD ocurre alrededor de las 24 h de vida, con recuperación hacia las 96 h. Reevalúe en serie.']},
+      {n:'2', tone:'a', t:'Descargue el VD', s:'Si coexiste hipertensión pulmonar',
+       drugs:[['Óxido nítrico inhalado','','20 ppm']],
+       items:['Mantenga la permeabilidad ductal si el VD la necesita como válvula de escape.']},
+      {n:'3', tone:'r', t:'Rescate', s:'',
+       items:['Hidrocortisona si hay resistencia a volumen y vasopresores. Valore ECMO si el deterioro continúa.']}
+    ],
+    BIVENT:[
+      {n:'1', tone:'r', t:'Soporte biventricular', s:'',
+       drugs:[['Adrenalina','dosis baja, soporte de ambos ventrículos','< 0,04 µg/kg/min'],
+              ['Dobutamina','','2,5–7,5 µg/kg/min']],
+       items:['Evite la dopamina a dosis altas y la combinación de dopamina con adrenalina: en modelos experimentales de asfixia aumenta el cociente presión pulmonar/presión sistémica.']},
+      {n:'2', tone:'r', t:'Componente suprarrenal', s:'',
+       drugs:[['Hidrocortisona','soporte suprarrenal en casos seleccionados','0,5 mg/kg IV cada 6 h']],
+       items:['Extraiga cortisol basal antes de iniciarla: por debajo de 15 µg/dL en un paciente en shock sostiene la indicación; por debajo de 5 µg/dL la refuerza.',
+              'Vigile la dosis acumulada y no pase de 5,6 mg/kg sin replantear la indicación.']},
+      {n:'3', tone:'r', t:'Si el deterioro continúa', s:'',
+       items:['Valore ECMO. Excepcionalmente, considere suspender la hipotermia.']}
+    ],
+    VI:[
+      {n:'1', tone:'r', t:'Optimice el gasto sistémico', s:'',
+       drugs:[['Adrenalina','','< 0,04 µg/kg/min'],
+              ['Dobutamina','','2,5–7,5 µg/kg/min'],
+              ['Milrinona','ocasionalmente, con función renal y presión sistémica vigiladas','0,25–0,5 µg/kg/min']]},
+      {n:'2', tone:'r', t:'Cuidado con los vasodilatadores pulmonares', s:'Riesgo de robo sistémico',
+       items:['Con disfunción del VI significativa, el <strong>óxido nítrico inhalado puede empeorar la congestión venosa pulmonar</strong> y deteriorar el índice de oxigenación.',
+              'Evítelo especialmente si hay cortocircuito ductal de izquierda a derecha.']},
+      {n:'3', tone:'a', t:'Mantenga la permeabilidad ductal', s:'',
+       drugs:[['Prostaglandina E1','si la circulación sistémica depende del gasto del VD','0,01–0,02 µg/kg/min']],
+       items:['Considere otras causas: compromiso coronario, cardiopatía estructural.']}
+    ],
+    HIPERPERF:[
+      {n:'0', tone:'r', t:'Deje de escalar', s:'Aquí el daño lo hace el tratamiento',
+       items:['El cerebro está en fase de reperfusión con autorregulación abolida: la presión sistémica se transmite directamente al lecho cerebral.',
+              'Cada elevación brusca de presión aumenta la presión de perfusión cerebral y puede producir hiperperfusión, daño microvascular, hemorragia y estrés oxidativo.',
+              'Un gasto cardíaco elevado durante el recalentamiento se asocia a neuroimagen anormal.']},
+      {n:'1', tone:'a', t:'Retire de forma ordenada', s:'Destete activo, no pasivo',
+       items:['Reduzca vasopresores primero; deje el inotrópico para el final si hay disfunción real.',
+              'Objetivo: presión arterial media estable en torno a <strong>50 mmHg</strong>, que es el valor asociado a mejor preservación de la autorregulación.',
+              'Evite tanto la hipotensión como la hipertensión: la ventana terapéutica es estrecha por ambos lados.']},
+      {n:'2', tone:'t', t:'Vigile', s:'',
+       items:['Repita índice de resistencia y saturación regional cerebral cada 6–12 h.',
+              'Un índice de resistencia bajo mantenido y una saturación regional cerebral alta son marcadores pronósticos adversos.']}
+    ],
+    ESTABLE:[
+      {n:'0', tone:'g', t:'Observación estructurada', s:'',
+       items:['Reevalúe con ecocardiografía dirigida a las 24 h de vida: es el momento de mayor deterioro de la función del VD.',
+              'Repita antes y después del recalentamiento: la resistencia vascular sistémica alta de la hipotermia puede enmascarar una disfunción que se hace evidente al recalentar.']}
+    ]
+  };
+  return base[f] || base.ESTABLE;
+}
+
+/* ============================================================
+   RENDER DE PASOS
+   ============================================================ */
+function renderCtx(){
+  return num('eg','Edad gestacional','38','semanas')
+   + `<div class="grid2">${num('peso','Peso','3.2','kg')}${num('horas','Horas de vida','12','h')}</div>`
+   + pick('sarnat','Estadio de encefalopatía',[
+       {v:'leve',l:'Leve',tone:'safe'},{v:'moderada',l:'Moderada',tone:'warn'},{v:'severa',l:'Severa',tone:'dang'}])
+   + pick('fase','Fase térmica actual',[
+       {v:'pre',l:'Antes del enfriamiento',s:'Estabilización inicial, primeras 6 h'},
+       {v:'enfriamiento',l:'Durante el enfriamiento',s:'Mantenimiento a 33,5 °C'},
+       {v:'recalentamiento',l:'Recalentamiento',s:'≤ 0,5 °C por hora',tone:'warn'},
+       {v:'post',l:'Después del recalentamiento',s:'Primeras 24 h de normotermia',tone:'warn'}])
+   + faseAviso();
+}
+function faseAviso(){
+  const m = {
+    pre:['amber','Antes de enfriar','Evite las expansiones bruscas de volemia. El miocardio asfíctico tolera mal la sobrecarga. Si sospecha hipovolemia real, bolos de 10–20 mL/kg administrados con lentitud. Idealmente evalúe la función miocárdica con ecocardiografía antes de elegir el fármaco.'],
+    enfriamiento:['slate','Durante el enfriamiento','La hipotermia reduce el gasto y la frecuencia por descenso metabólico: eso no es patológico. Use los mismos rangos de dosis que en normotermia, pero recuerde que el aclaramiento de los fármacos disminuye, con riesgo de acumulación. Titule de forma continua.'],
+    recalentamiento:['red','Recalentamiento','La vasodilatación periférica y la caída de resistencias producen hipotensión con frecuencia. Prefiera cebar la circulación con volumen antes que subir inotrópicos de forma automática. Los vasoconstrictores sistémicos aumentan la poscarga y pueden promover lesión por isquemia-reperfusión.'],
+    post:['amber','Después del recalentamiento','La resistencia vascular sistémica elevada de la hipotermia puede haber enmascarado una disfunción cardíaca subyacente que se hace evidente ahora. Prepárese para un ajuste rápido del soporte, en cualquiera de las dos direcciones.']
+  }[S.fase];
+  if(!m) return '';
+  return `<div class="note ${m[0]}"><b>${m[1]}</b>${m[2]}</div>`;
+}
+
+function renderN1(){
+  const pamObj = pamEsperada(), pam = n(S.pam);
+  let av = '';
+  if(pam!==null && pamObj!==null){
+    av = pam < pamObj
+      ? `<div class="calc"><b>PAM ${pam} mmHg</b> · umbral por edad gestacional ${pamObj} mmHg
+         <span class="verdict">Por debajo del umbral clásico. Pero la presión arterial media es mal predictor del flujo sistémico y del pronóstico: no la use sola como disparador de tratamiento. El valor asociado a mejor preservación de la autorregulación cerebral es ≥ 50 mmHg.</span></div>`
+      : `<div class="calc"><b>PAM ${pam} mmHg</b> · umbral por edad gestacional ${pamObj} mmHg
+         <span class="verdict">Dentro del umbral clásico. Cuidado: puede haber presión normal con perfusión sistémica comprometida por vasoconstricción periférica compensadora, agravada por la hipotermia.</span></div>`;
+  }
+  const g = calcGradiente(), oi = calcOI();
+  let av2 = '';
+  if(g!==null) av2 += `<div class="calc"><b>Gradiente pre-post ductal ${g > 0 ? '+' : ''}${g} puntos</b>
+    <span class="verdict">${g>=10?'Cortocircuito derecha-izquierda significativo por el ductus: apoya hipertensión pulmonar aguda.':(g<=-5?'Saturación posductal mayor: revise la colocación de los sensores o considere fisiología con transposición.':'Sin gradiente significativo. Un gradiente ausente no descarta hipertensión pulmonar con cortocircuito auricular.')}</span></div>`;
+  if(oi!==null) av2 += `<div class="calc"><b>Índice de oxigenación ${oi.toFixed(1)}</b>
+    <span class="verdict">${oi>=25?'Falla respiratoria hipoxémica severa.':(oi>=15?'Falla respiratoria hipoxémica moderada.':'Sin falla hipoxémica significativa.')}</span></div>`;
+
+  return `<div class="grid3">${num('pas','PA sistólica','','mmHg')}${num('pad','PA diastólica','','mmHg')}${num('pam','PA media','','mmHg')}</div>`
+   + av
+   + `<div class="grid2">${num('fc','Frecuencia cardíaca','','lpm')}</div>`
+   + pick('llenado','Llenado capilar',[{v:'menor3',l:'≤ 3 s',tone:'safe'},{v:'mayor3',l:'> 3 s',tone:'warn'}],'Mala correlación con el gasto cardíaco; influido por múltiples factores.')
+   + pick('diuresis','Diuresis',[{v:'normal',l:'≥ 1 mL/kg/h',tone:'safe'},{v:'oliguria',l:'< 1 mL/kg/h',tone:'warn'},{v:'anuria',l:'Anuria',tone:'dang'}],'Difícil de interpretar: puede reflejar el insulto hipóxico, hipoperfusión renal o el efecto de la propia hipotermia.')
+   + `<div class="grid2">${num('spo2pre','SpO₂ preductal','','%')}${num('spo2post','SpO₂ posductal','','%')}</div>`
+   + `<div class="grid3">${num('fio2','FiO₂','','%')}${num('pmva','PMVA','','cmH₂O')}${num('pao2','PaO₂','','mmHg')}</div>`
+   + av2
+   + `<div class="note slate"><b>Por qué este nivel no basta</b>Presión arterial, llenado capilar, frecuencia, diuresis y lactato tienen limitaciones documentadas para reflejar la adecuación circulatoria. La decisión terapéutica se toma en el nivel 3.</div>`;
+}
+
+function renderN2(){
+  const lac = n(S.lactato), cor = n(S.cortisol), trp = tropNgL();
+  const horas = n(S.horas);
+  let av = '';
+
+  if(lac!==null) av += `<div class="calc"><b>Lactato ${lac} mmol/L</b>
+    <span class="verdict">${lac>=5?'Elevado. Refleja gravedad del insulto primario, pero se correlaciona mal con el gasto cardíaco en tiempo real.':'Recuerde: puede ser normal en shock compensado por mayor extracción de oxígeno, y puede subir al mejorar la perfusión por lavado de tejidos mal perfundidos.'}</span></div>`;
+
+  if(trp!==null){
+    const [tono, tit, txt] = tropBanda(trp);
+    const esp = TROP_ESPERADA[S.sarnat||''];
+    av += `<div class="note ${tono}"><b>Troponina T ${Math.round(trp)} ng/L · ${tit}</b>${txt}
+      ${S.sarnat?`<div style="margin-top:7px;font-size:12px">Esperado a las 2–4 h en ${esp[0]}: <span class="mono">${esp[1]}</span>. Referencia del término sano: <span class="mono">40 ± 20 ng/L</span>.</div>`:''}
+      ${(horas!==null && horas>6)?`<div style="margin-top:7px;font-size:12px"><strong>Ojo con el momento:</strong> los rangos anteriores proceden de muestras de 2–4 h y esta lleva ${horas} h de vida. El pico ocurre hacia las 48–72 h tras la asfixia, así que un valor tardío alto puede no significar lo mismo.</div>`:''}
+    </div>`;
+  }
+
+  if(cor!==null){
+    const [tono, tit, txt] = cortBanda(cor);
+    av += `<div class="note ${tono}"><b>Cortisol ${cor} µg/dL (${Math.round(cor*27.6)} nmol/L) · ${tit}</b>${txt}</div>`;
+  }
+
+  return `<div class="grid2">${num('ph','pH','','')}${num('eb','Exceso de base','','mmol/L')}</div>`
+   + `<div class="grid2">${num('lactato','Lactato','','mmol/L')}${num('creat','Creatinina','','mg/dL')}</div>`
+   + pick('tropUnit','Unidad en que informa su laboratorio la troponina',[
+       {v:'ngL',l:'ng/L',s:'Habitual en ensayos de alta sensibilidad'},
+       {v:'ngmL',l:'ng/mL',s:'Multiplique por 1000 para obtener ng/L'}])
+   + `<div class="grid2">${num('troponina','Troponina T',S.tropUnit==='ngmL'?'0.12':'120',S.tropUnit==='ngmL'?'ng/mL':'ng/L','Idealmente entre las 2 y las 6 h de vida')}${num('cortisol','Cortisol basal','','µg/dL','Extraiga antes de la primera dosis de esteroide')}</div>`
+   + av
+   + `<details><summary>Referencia de troponina T por estadio (muestra de 2–4 h)</summary><div class="inner">
+      <table class="ref">
+        <tr><td>Término sano</td><td>40 ± 20 ng/L &nbsp;<span style="color:var(--tinta3)">(0,04 ± 0,02 ng/mL)</span></td></tr>
+        <tr><td>EHI leve</td><td>70 ± 30 ng/L</td></tr>
+        <tr><td>EHI moderada</td><td>120 ± 70 ng/L</td></tr>
+        <tr><td>EHI grave</td><td>340 ± 210 ng/L</td></tr>
+        <tr><td>&lt; 80–100</td><td>Transición normal o EHI sin lesión miocárdica importante</td></tr>
+        <tr><td>100–200</td><td>Zona gris, frecuente en EHI leve-moderada</td></tr>
+        <tr><td>200–400</td><td>Compromiso miocárdico significativo</td></tr>
+        <tr><td>&gt; 400</td><td>Lesión grave, shock, hipertensión pulmonar o disfunción ventricular</td></tr>
+        <tr><td>114,5</td><td>Corte para disfunción miocárdica ecocardiográfica</td></tr>
+        <tr><td>190</td><td>Corte para mortalidad (sensibilidad 82 %, especificidad 80 %)</td></tr>
+        <tr><td>250,5</td><td>Segundo corte descrito para mortalidad</td></tr>
+      </table>
+      <p style="margin:10px 0 0;font-size:12.5px">Son zonas orientativas, no puntos de corte universales: dependen de la generación y la plataforma del ensayo. La troponina mide lesión <em>miocárdica</em>, no gradúa la lesión cerebral. Correlaciónela con la tendencia a las 12–24 h, la perfusión, el lactato, la diuresis, los vasoactivos y la ecocardiografía funcional.</p>
+      </div></details>`
+   + `<details><summary>Cortisol y decisión sobre hidrocortisona</summary><div class="inner">
+      <table class="ref">
+        <tr><td>7–25 µg/dL</td><td>Rango orientativo del término sano en las primeras 24 h (200–700 nmol/L)</td></tr>
+        <tr><td>&lt; 15 µg/dL</td><td>“Inapropiadamente bajo” en el neonato con shock (&lt; 414 nmol/L)</td></tr>
+        <tr><td>&lt; 5 µg/dL</td><td>Muy sugestivo en shock refractario (&lt; 138 nmol/L)</td></tr>
+      </table>
+      <p style="margin:10px 0 0;font-size:12.5px">La EHI puede asociarse a insuficiencia corticosteroidea <strong>relativa y transitoria</strong>, sobre todo bajo hipotermia y con hipotensión resistente. No equivale a insuficiencia suprarrenal primaria. En EHI sin compromiso hemodinámico puede estar elevado inicialmente por estrés y descender en las primeras 12–24 h.</p>
+      <p style="margin:8px 0 0;font-size:12.5px">En una cohorte de 346 neonatos enfriados, a 79 (22,8 %) se les midió cortisol por hipotensión, y dentro de ese subgrupo ya seleccionado el 89 % tenía valores &lt; 15 µg/dL. <strong>Eso no significa que el 89 % de los EHI tenga insuficiencia suprarrenal.</strong></p>
+      <p style="margin:8px 0 0;font-size:12.5px">No existe punto de corte neonatal universal: influyen la hora posnatal, el tipo de parto, el ensayo, la albúmina y la globulina fijadora. Un cortisol aislado no confirma el diagnóstico. Obtenga cortisol y ACTH antes de la primera dosis siempre que no retrase el tratamiento.</p>
+      </div></details>`
+   + `<div class="note amber"><b>Farmacocinética bajo hipotermia</b>La hipotermia reduce el aclaramiento y la eliminación de los fármacos cardiovasculares, con riesgo de acumulación y toxicidad. La respuesta a nivel de receptor también cambia. Use los mismos rangos de dosis que en normotermia, pero titule de forma continua según respuesta clínica.</div>`;
+}
+
+function renderN3(){
+  if(S.ecoHecho==='no'){
+    return pick('ecoHecho','¿Dispone de ecocardiografía dirigida?',[
+        {v:'si',l:'Sí, la realicé'},{v:'no',l:'No disponible ahora',tone:'warn'}])
+     + `<div class="note red"><b>Techo diagnóstico alcanzado</b>Sin ecocardiografía, cualquier fenotipo que produzca esta herramienta es una hipótesis, no un diagnóstico. En las encuestas norteamericanas solo el 59 % de los centros sin ecocardiografía dirigida realizaba estudio precoz en hipotensos con inotrópicos, el 20 % cuantificaba gasto cardíaco y el 43 % evaluaba la función del ventrículo derecho.</div>`
+     + `<div class="note terra"><b>Conducta prudente mientras tanto</b>Si debe iniciar soporte a ciegas, prefiera dobutamina 2,5–7,5 µg/kg/min o adrenalina a dosis baja (&lt; 0,04 µg/kg/min) sobre dopamina a dosis altas. Ambas sostienen la función biventricular sin elevar bruscamente la presión arterial media. Documente el motivo y consiga el estudio en cuanto pueda.</div>`
+     + (function(){
+         const t = tropNgL();
+         if(t===null) return `<div class="note slate"><b>Un sustituto imperfecto</b>Sin ecocardiografía, una troponina T de las 2–6 h aporta algo: por encima de 114,5 ng/L se asocia a disfunción miocárdica en el estudio ecocardiográfico. Regístrela en el nivel 2.</div>`;
+         if(t>250) return `<div class="note red"><b>Troponina ${Math.round(t)} ng/L sin ecocardiografía</b>Rango asociado a disfunción miocárdica y a mortalidad. Trate al paciente como si tuviera compromiso ventricular hasta demostrar lo contrario: prefiera dobutamina o adrenalina a dosis baja, evite dopamina a dosis alta y gestione el traslado o la interconsulta para el estudio.</div>`;
+         if(t>114.5) return `<div class="note amber"><b>Troponina ${Math.round(t)} ng/L sin ecocardiografía</b>Por encima del corte de 114,5 ng/L asociado a disfunción miocárdica ecocardiográfica. Aumenta la probabilidad de compromiso ventricular, pero no distingue ventrículo derecho de izquierdo ni identifica hipertensión pulmonar: siga necesitando el estudio.</div>`;
+         return `<div class="note green"><b>Troponina ${Math.round(t)} ng/L sin ecocardiografía</b>Por debajo del corte de 114,5 ng/L. Hace menos probable una disfunción miocárdica significativa, aunque no descarta hipertensión pulmonar ni problemas de precarga.</div>`;
+       })()
+     + `<div class="note slate"><b>Fiabilidad</b>Incluso con equipo, la valoración cualitativa de la función del ventrículo derecho tiene concordancia interobservador pobre. Cuantifique: TAPSE y fracción de acortamiento de área.</div>`;
+  }
+  const pr = calcPaatRvet(), tapse = n(S.tapse), facvd = n(S.facvd);
+  let av='';
+  if(tapse!==null) av += `<div class="calc"><b>TAPSE ${tapse} mm</b>
+    <span class="verdict">${tapse<6?'Por debajo de 6 mm: sensibilidad 78 %, especificidad 81 % para muerte o neuroimagen anormal. En cohortes de seguimiento se asoció de forma independiente a peores puntuaciones de Bayley III a los 18 meses.':'Por encima del umbral de 6 mm.'}</span></div>`;
+  if(facvd!==null) av += `<div class="calc"><b>Fracción de acortamiento de área del VD ${facvd} %</b>
+    <span class="verdict">${facvd<29?'Por debajo de 29 %: sensibilidad 83 %, especificidad 84 % para resultado adverso.':'Por encima del umbral de 29 %.'}</span></div>`;
+  if(pr!==null){
+    const [tono, tit, u] = paatVerdict(pr);
+    const ref = paatEsperado();
+    av += `<div class="note ${tono}"><b>PAAT/RVET ${pr.toFixed(2)} · ${tit}</b>
+      Umbrales aplicados para <em>${u.ctx}</em>: elevada por debajo de ${u.mod.toFixed(2)}, severa por debajo de ${u.sev.toFixed(2)}. Normalidad esperada: ${u.norm}.
+      ${ref?`<div style="margin-top:7px;font-size:12px">Valores absolutos esperados a las <strong>${ref.et}</strong> en el término sano: PAAT <span class="mono">${ref.paat} ms</span>, RVET <span class="mono">${ref.rvet} ms</span>. Medidos: <span class="mono">${n(S.paat)} / ${n(S.rvet)} ms</span>.</div>`:''}
+      <div style="margin-top:7px;font-size:12px">Ambos tiempos dependen de la frecuencia cardíaca${n(S.fc)!==null?` (aquí ${n(S.fc)} lpm)`:''}, por eso se interpreta el cociente y no el PAAT aislado. El RVET por sí solo aporta poco.</div>
+    </div>`;
+  }
+
+  return pick('ecoHecho','¿Dispone de ecocardiografía dirigida?',[
+      {v:'si',l:'Sí, la realicé'},{v:'no',l:'No disponible ahora',tone:'warn'}])
+   + `<div class="grid2">${num('tapse','TAPSE','','mm','Umbral 6 mm')}${num('facvd','FAC del VD','','%','Umbral 29 %')}</div>`
+   + `<div class="grid2">${num('fevi','FEVI','','%')}${num('lvoVal','Gasto ventricular izquierdo','','mL/kg/min','Normal 150–300')}</div>`
+   + `<div class="grid2">${num('paat','PAAT','','ms','Tiempo de aceleración pulmonar')}${num('rvet','RVET','','ms','Tiempo de eyección del VD')}</div>`
+   + av
+   + pick('ductus','Ductus arterioso',[
+       {v:'no_restrictivo',l:'Permeable no restrictivo',s:'Actúa como válvula de escape del VD'},
+       {v:'restrictivo',l:'Restrictivo',s:'Escape limitado',tone:'warn'},
+       {v:'cerrado',l:'Cerrado',s:'Sin descompresión del VD',tone:'dang'}])
+   + pick('shuntDuctal','Dirección del cortocircuito ductal',[
+       {v:'izq_dcha',l:'Izquierda → derecha'},{v:'bidireccional',l:'Bidireccional',tone:'warn'},
+       {v:'dcha_izq',l:'Derecha → izquierda',tone:'dang'},{v:'na',l:'No valorable / cerrado'}])
+   + pick('shuntAuricular','Cortocircuito auricular',[
+       {v:'izq_dcha',l:'Izquierda → derecha'},{v:'bidireccional',l:'Bidireccional',tone:'warn'},
+       {v:'dcha_izq',l:'Derecha → izquierda',tone:'dang'},{v:'na',l:'No valorable'}])
+   + pick('septum','Septum interventricular',[
+       {v:'normal',l:'Curvatura normal',tone:'safe'},{v:'aplanado',l:'Aplanado o en D',s:'Sobrecarga de presión del VD',tone:'dang'}])
+   + pick('flujoPulmonar','Flujo anterógrado por la válvula pulmonar',[
+       {v:'presente',l:'Presente',tone:'safe'},{v:'ausente',l:'Ausente',s:'Atresia funcional',tone:'dang'}])
+   + pick('precarga','Llenado ventricular',[
+       {v:'adecuada',l:'Adecuado',tone:'safe'},{v:'baja',l:'Cavidades subllenas',tone:'warn'},{v:'alta',l:'Dilatado / sobrecargado',tone:'warn'}])
+   + `<details><summary>Referencia de PAAT y RVET por edad posnatal</summary><div class="inner">
+      <table class="ref">
+        <tr><td style="color:var(--tinta)"><strong>Edad</strong></td><td><strong>PAAT</strong></td><td><strong>RVET</strong></td></tr>
+        ${PAAT_REF.map(r=>`<tr><td>${r.et}</td><td>${r.paat} ms</td><td>${r.rvet} ms</td></tr>`).join('')}
+      </table>
+      <p style="margin:10px 0 0;font-size:12.5px"><strong>No existe un único valor neonatal normal.</strong> El PAAT aumenta rápidamente conforme cae la resistencia vascular pulmonar tras el nacimiento, y ambos tiempos dependen de la frecuencia cardíaca.</p>
+      <ul style="padding-left:17px;margin:8px 0 0;font-size:12.5px">
+        <li>Término estable de 24–48 h: PAAT ≈ 55–75 ms, RVET ≈ 200–220 ms.</li>
+        <li>Resto del período neonatal: el PAAT sigue subiendo; mediana publicada de 81 ms, rango 53–104 ms.</li>
+        <li>Prematuro extremo sano: PAAT 44 ± 3 ms el día 1, 47 ± 3 el día 2 y 49 ± 6 en los días 5–7, con cociente que pasa de ≈ 0,25 a ≈ 0,29.</li>
+        <li>Tras la transición, un cociente de 0,30–0,31 o mayor es tranquilizador. <strong>En las primeras horas, 0,19–0,25 puede ser fisiológico.</strong></li>
+      </ul>
+      <p style="margin:8px 0 0;font-size:12.5px">Integre siempre con frecuencia cardíaca, edad gestacional, cortocircuito ductal, septo, regurgitación tricuspídea y función del VD. Un cociente aislado no diagnostica hipertensión pulmonar.</p>
+      </div></details>`
+   + `<div class="note terra"><b>Cronología del ventrículo derecho</b>La función del VD toca su punto más bajo alrededor de las <strong>24 h de vida</strong> y se recupera hacia las 96 h. Un estudio único a las 6 h puede tranquilizarle falsamente. Repita a las 24 h y antes y después del recalentamiento.</div>`;
+}
+
+function renderN4(){
+  const ir = calcIR();
+  let av='';
+  if(ir!==null) av += `<div class="calc"><b>Índice de resistencia ${ir.toFixed(2)}</b>
+    <span class="verdict">${ir<0.55?'Bajo. En la asfixia del recién nacido a término sugiere perfusión de lujo por fallo de la autorregulación; se ha descrito como predictor fiable de resultado adverso.':(ir>0.90?'Elevado. Compatible con edema cerebral, isquemia miocárdica, convulsiones u otro proceso intracraneal. Considere también ductus permeable y neumotórax.':'Dentro del rango habitual. Nota: la hipotermia degrada el valor pronóstico del índice de resistencia; interprételo con cautela mientras el paciente esté enfriado.')}</span></div>`;
+  return pick('nirs','Saturación regional cerebral por espectroscopía',[
+      {v:'no',l:'No disponible'},
+      {v:'bajo',l:'Baja (< 55 %)',tone:'warn'},
+      {v:'normal',l:'Normal (55–85 %)',tone:'safe'},
+      {v:'alto',l:'Alta (> 85 %)',s:'Baja extracción de oxígeno: marcador pronóstico adverso',tone:'dang'}],
+      'Una revisión sistemática de 47 estudios confirmó la saturación regional cerebral elevada como marcador pronóstico de mal resultado del neurodesarrollo. Tanto la variabilidad alta como la muy baja se asocian a mal pronóstico.')
+   + `<div class="grid2">${num('psv','Velocidad sistólica pico ACM','','cm/s')}${num('edv','Velocidad diastólica final','','cm/s')}</div>`
+   + av
+   + pick('aeeg','Electroencefalografía integrada por amplitud',[
+      {v:'no',l:'No disponible'},{v:'normal',l:'Normal / continuo',tone:'safe'},
+      {v:'anormal',l:'Anormal',tone:'warn'},{v:'convulsiones',l:'Convulsiones',tone:'dang'}])
+   + `<div class="note slate"><b>La torre de monitoreo</b>Doppler de arteria cerebral anterior y media, flujo de vena cava superior, gasto cardíaco no invasivo y espectroscopía cercana al infrarrojo, en conjunto, aportan la visión de la circulación cerebral que ningún parámetro aislado da.</div>`;
+}
+
+function renderTx(){
+  const vis = calcVIS(), hc = n(S.hcTotal), hv = n(S.horasVaso);
+  let av='';
+  if(vis>0) av += `<div class="calc"><b>Puntuación vasoactiva-inotrópica ${vis.toFixed(1)}</b>
+    <span class="verdict">${vis>=20?'Carga farmacológica alta. Revise si cada agente sigue justificado por el fenotipo actual.':'Registre en serie: la tendencia informa más que el valor puntual.'}</span></div>`;
+  if(hc!==null && hc>0) av += `<div class="calc"><b>Hidrocortisona acumulada ${hc} mg/kg</b>
+    <span class="verdict">${hc>=5.6?'<strong>Por encima de 5,6 mg/kg.</strong> Ese punto de corte predijo resultado cognitivo adverso con sensibilidad 75 % y especificidad 68 %. Cada mg/kg adicional se asoció a un 16 % más de probabilidades de resultado cognitivo adverso. Plantee la suspensión.':'Por debajo del punto de corte de 5,6 mg/kg. Mantenga la dosis mínima eficaz y suspenda en cuanto la presión se estabilice.'}</span></div>`;
+  if(hv!==null && hv>0){
+    const or = Math.pow(1.12, hv/24);
+    av += `<div class="calc"><b>${hv} h de soporte vasoactivo</b>
+      <span class="verdict">Por cada 24 h adicionales de soporte cardiovascular, las probabilidades de resultado adverso aumentaron un 12 % en la cohorte de seguimiento. Estimación acumulada para esta duración: factor ≈ ${or.toFixed(2)}. <em>Es una asociación observacional, no una relación causal demostrada: la duración también mide gravedad.</em></span></div>`;
+  }
+  return `<div class="grid2">${num('dopa','Dopamina','','µg/kg/min')}${num('dobu','Dobutamina','','µg/kg/min')}</div>`
+   + `<div class="grid2">${num('epi','Adrenalina','','µg/kg/min')}${num('norepi','Noradrenalina','','µg/kg/min')}</div>`
+   + `<div class="grid2">${num('milri','Milrinona','','µg/kg/min')}${num('vaso','Vasopresina','','U/kg/min')}</div>`
+   + `<div class="grid2">${num('hcTotal','Hidrocortisona acumulada','','mg/kg')}${num('horasVaso','Horas de soporte','','h')}</div>`
+   + av
+   + (n(S.dopa)>10 ? `<div class="note red"><b>Dopamina a dosis alta</b>Sigue siendo el agente de primera línea más usado para la hipotensión neonatal, pero en este contexto hay señales de alarma: en una cohorte observacional el tratamiento con dopamina se asoció a mayor riesgo de muerte o neuroimagen anormal; induce taquicardia que acorta el tiempo de relajación y deteriora el rendimiento miocárdico; y exacerba la vasoconstricción del lecho pulmonar. Revalúe la indicación.</div>`:'')
+   + (n(S.milri)>0 && (S.fase==='enfriamiento'||S.fase==='pre') ? `<div class="note red"><b>Milrinona durante la hipotermia</b>El aclaramiento renal reducido produce acumulación, con caída marcada de la presión diastólica e hipotensión sistémica por vasodilatación. Si la mantiene: sin dosis de carga, vigile diuresis y presión diastólica.</div>`:'');
+}
+
+/* ---------------- Resultado ---------------- */
+function renderOut(){
+  const res = motor();
+  const top = res[0];
+  const F = FENOTIPOS[top.k];
+  let h = '';
+
+  // Faltantes
+  const falta = [];
+  if(S.ecoHecho!=='si') falta.push('ecocardiografía dirigida');
+  if(!S.fase) falta.push('fase térmica');
+  if(S.nirs==='no'||!S.nirs) falta.push('espectroscopía cerebral');
+  if(falta.length) h += `<div class="note amber"><b>Fuerza de esta salida</b>Falta ${falta.join(', ')}. Trate el resultado como orientación, no como diagnóstico.</div>`;
+
+  // Fenotipo principal
+  h += `<div class="pheno primary">
+    <div class="code">Fenotipo dominante</div>
+    <h3>${F.nom}</h3>
+    <p>${F.res}</p>
+    <div class="confbar"><i style="width:100%"></i></div>
+    <div class="code">Sostenido por</div>
+    <ul style="margin:6px 0 0;padding-left:17px;font-size:13px;color:var(--tinta2)">${top.ev.map(e=>`<li>${e}</li>`).join('')}</ul>
+  </div>`;
+
+  // Escalones
+  h += `<h2 style="font-size:16px;margin:18px 0 9px">Conducta escalonada</h2>`;
+  escalones(top.k).forEach(t=>{
+    h += `<div class="tier"><div class="head">
+      <div class="num ${t.tone}">${t.n}</div>
+      <div><h4>${t.t}</h4>${t.s?`<span>${t.s}</span>`:''}</div></div>
+      <div class="body">
+        ${t.drugs?t.drugs.map(d=>`<div class="drug"><div class="n">${d[0]}${d[1]?`<small>${d[1]}</small>`:''}</div><div class="d">${d[2]}</div></div>`).join(''):''}
+        ${t.items?`<ul${t.drugs?' style="margin-top:10px"':''}>${t.items.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}
+      </div></div>`;
+  });
+
+  // Alternativas — arquitectura anticonvergencia
+  if(res.length>1){
+    h += `<h2 style="font-size:16px;margin:20px 0 4px">Antes de comprometerse</h2>
+      <p style="font-size:13px;color:var(--tinta2);margin:0 0 10px">Estos fenotipos compiten con el anterior. Descártelos activamente: en la EHI los cuadros combinados son la norma, no la excepción.</p>`;
+    res.slice(1).forEach(r=>{
+      const G = FENOTIPOS[r.k];
+      h += `<div class="pheno alt">
+        <div class="code">Alternativa · concordancia ${r.conf} %</div>
+        <h3 style="font-size:15px">${G.nom}</h3>
+        <p style="font-size:13px">${G.res}</p>
+        <div class="code">Lo apoyaría</div>
+        <ul style="margin:5px 0 0;padding-left:17px;font-size:12.5px;color:var(--tinta2)">${r.ev.map(e=>`<li>${e}</li>`).join('')}</ul>
+      </div>`;
+    });
+  }
+
+  // Diferenciales obligados
+  h += `<details><summary>Descarte siempre, sea cual sea el fenotipo</summary><div class="inner"><ul style="padding-left:17px;margin:0">
+    <li>Neumotórax a tensión y taponamiento cardíaco.</li>
+    <li>Cardiopatía congénita estructural: el patrón hemodinámico puede imitarla.</li>
+    <li>Hemorragia suprarrenal, especialmente si hay hipotensión resistente y anemización.</li>
+    <li>Sepsis concomitante.</li>
+    <li>Presión media de la vía aérea excesiva reduciendo el retorno venoso.</li>
+    <li>Convulsiones, alteraciones del calcio iónico, magnesio y glucemia.</li>
+    <li>Anemia o hematocrito bajo limitando el transporte de oxígeno.</li>
+  </ul></div></details>`;
+
+  // Stewardship
+  h += `<h2 style="font-size:16px;margin:20px 0 9px">Administración prudente de vasoactivos</h2>
+  <div class="note terra"><b>Los tres compromisos</b>
+    <ol style="padding-left:17px;margin:6px 0 0">
+      <li><strong>Dosis mínima eficaz.</strong> Agentes a dosis baja como dobutamina 2,5–7,5 µg/kg/min o adrenalina &lt; 0,04 µg/kg/min sostienen la función biventricular sin elevaciones bruscas de la presión arterial media.</li>
+      <li><strong>Duración mínima.</strong> Cada 24 h adicionales de soporte se asociaron a un 12 % más de probabilidades de resultado adverso. Fije revisión diaria del destete.</li>
+      <li><strong>Objetivos individualizados.</strong> Basados en la evaluación hemodinámica y neurológica completa, no en un número de presión arterial media.</li>
+    </ol></div>
+  <div class="note red"><b>La ventana es estrecha por los dos lados</b>El niño con EHI suele estar ya en fase de reperfusión o hiperemia cuando iniciamos el tratamiento, con tono vascular alterado y autorregulación cerebral rota. La presión sistémica se transmite directamente al lecho cerebral: <strong>tanto la hipotensión como la hipertensión agravan la lesión neuronal</strong>. Dopamina y adrenalina, además de elevar la resistencia pulmonar, tienen propiedades proinflamatorias y vasoconstrictoras que comprometen el flujo microcirculatorio.</div>`;
+
+  // Reevaluación
+  h += `<h2 style="font-size:16px;margin:20px 0 9px">Cuándo volver a mirar</h2>
+  <div class="card" style="margin:0 0 12px"><table class="ref">
+    <tr><td>6–12 h</td><td>Primera ecocardiografía si hay soporte inotrópico iniciado.</td></tr>
+    <tr><td>24 h</td><td><strong>Momento crítico:</strong> punto más bajo de la función del VD. Repita TAPSE y fracción de acortamiento de área.</td></tr>
+    <tr><td>48–72 h</td><td>Pico de troponina. Recuperación progresiva de la función del VD hacia las 96 h.</td></tr>
+    <tr><td>Pre-recalentamiento</td><td>Establezca la línea base antes de que caiga la resistencia vascular sistémica.</td></tr>
+    <tr><td>Recalentamiento</td><td>Vigile hipotensión por vasodilatación y gasto cardíaco elevado. Recaliente ≤ 0,5 °C/h.</td></tr>
+    <tr><td>Post-recalentamiento</td><td>Puede emerger la disfunción cardíaca que la hipotermia enmascaraba.</td></tr>
+  </table></div>`;
+
+  // Vacíos de conocimiento
+  h += `<details><summary>Qué no sabemos todavía</summary><div class="inner">
+    <p style="margin:0 0 8px">Gran parte de la literatura son cohortes observacionales pequeñas con poca capacidad de generalización, y no hay evidencia de calidad que sostenga un abordaje terapéutico sobre otro. Prioridades de investigación señaladas por los autores:</p>
+    <ul style="padding-left:17px;margin:0">
+      <li>Modelos animales de disfunción del VD en EHI: efecto de la hipotermia, del soporte del VD y del recalentamiento.</li>
+      <li>Estudios farmacocinéticos de los tratamientos cardiovasculares bajo hipotermia.</li>
+      <li>Impacto del cribado hemodinámico sistemático.</li>
+      <li>Ensayos clínicos de tratamientos cardiovasculares adyuvantes.</li>
+    </ul></div></details>`;
+
+  // Referencias
+  h += `<details><summary>Base bibliográfica</summary><div class="inner"><ol class="refs" style="padding-left:18px;margin:0">
+    <li>Surak A, Schmölzer GM, McNamara PJ, Ting JY, Alshareef M, Mohammad K. Hemodynamics in infants with hypoxemic ischemic encephalopathy: pathophysiology and beyond. <em>J Perinatol</em>. 2025. doi:10.1038/s41372-025-02516-6 — <strong>artículo eje: fenotipos hemodinámicos y administración prudente de vasoactivos.</strong></li>
+    <li>Giesinger RE, Bailey LJ, Deshpande P, McNamara PJ. Hypoxic-ischemic encephalopathy and therapeutic hypothermia: the hemodynamic perspective. <em>J Pediatr</em>. 2017;180:22–30.e2 — marco fisiológico original por fases térmicas.</li>
+    <li>Giesinger RE, El Shahed AI, Castaldo MP, et al. Impaired right ventricular performance is associated with adverse outcome after hypoxic ischemic encephalopathy. <em>Am J Respir Crit Care Med</em>. 2019;200:1294–305 — umbrales de TAPSE &lt; 6 mm y FAC VD &lt; 29 %.</li>
+    <li>Rios DR, Lapointe A, Schmölzer GM, et al. Hemodynamic optimization for neonates with neonatal encephalopathy caused by a hypoxic ischemic event. <em>Semin Fetal Neonatal Med</em>. 2021;26:101277 — abordaje fisiológico por fenotipo.</li>
+    <li>Kovacs K, Giesinger RE, Lakatos A, et al. Comparative evaluation of approach to cardiovascular care in neonatal encephalopathy undergoing therapeutic hypothermia. <em>J Perinatol</em>. 2022;42:1637–43 — permisivo (51 % tratados) frente a agresivo (97 %): patrones de lesión más leves con la estrategia permisiva.</li>
+    <li>Kovacs K, Giesinger RE, Varga Z, Szabo M, Jermendy A, McNamara PJ. Association between cardiovascular care and neurodevelopmental outcomes in infants with neonatal encephalopathy and hemodynamic instability. <em>J Perinatol</em>. 2025;45:1073–80 — cada 24 h adicionales de soporte: +12 % de probabilidades de resultado adverso (n = 152).</li>
+    <li>Kovacs K, Szakmar E, Dobi M, et al. Neurodevelopmental outcome in infants with neonatal encephalopathy receiving hydrocortisone during therapeutic hypothermia: follow-up of the extended-CORTISoL trial. <em>J Perinatol</em>. 2025;45:1788–94 — +16 % de probabilidades de resultado cognitivo adverso por cada mg/kg acumulado; punto de corte 5,6 mg/kg.</li>
+    <li>Yu S, Xiao T, Li B, et al. Hemodynamic changes in neonatal hypoxic-ischemic encephalopathy requiring therapeutic hypothermia. <em>Eur J Pediatr</em>. 2026;185:93 — trayectoria del gasto izquierdo (92,8 → 144,5 mL/kg/min de T1 a T4) y aumento progresivo de la velocidad de flujo cerebral durante todo el enfriamiento y el recalentamiento.</li>
+    <li>Zanelli SA, Wusthoff CJ, Lucke AM, Kaufman DA; Committee on Fetus and Newborn, Section on Neurology. Therapeutic hypothermia for neonatal hypoxic-ischemic encephalopathy: clinical report. <em>Pediatrics</em>. 2026;157(2):e2025073627 — marco asistencial vigente de la Academia Americana de Pediatría.</li>
+    <li>Yeung T, Al Sawai A, Habib S, et al. Short and long-term outcomes in neonatal HIE treated with hypothermia and vasoactive medications. <em>Paediatr Child Health</em>. 2025;30:471–6.</li>
+    <li>Kovacs K, Szakmar E, Meder U, et al. A randomized controlled study of low-dose hydrocortisone versus placebo in dopamine-treated hypotensive neonates undergoing hypothermia treatment for HIE. <em>J Pediatr</em>. 2019;211:13–19.e3.</li>
+    <li>Jain A, et al. Valores de PAAT y RVET en el término sano durante la transición (30 min a 24 h). <em>J Pediatr</em>. 2018 — base de los umbrales por edad posnatal usados aquí.</li>
+    <li>Patel MD, et al. Índices ecocardiográficos de presión pulmonar en el prematuro extremo sano. <em>J Am Soc Echocardiogr</em>. 2019 — PAAT 44 ± 3 ms el día 1, 49 ± 6 en los días 5–7; cociente de 0,25 a 0,29.</li>
+    <li>Koestenberger M, et al. Referencia de PAAT en el resto del período neonatal: mediana 81 ms, rango 53–104 ms.</li>
+    <li>Güneş A, et al. Troponina T en las primeras 2–4 h según estadio de encefalopatía: término sano 40 ± 20 ng/L; EHI leve 70 ± 30; moderada 120 ± 70; grave 340 ± 210 ng/L.</li>
+    <li>Karlén J, et al. Valores de hs-cTnT (plataforma Roche) en neonatos sanos: mediana al nacimiento 34–38 ng/L, percentil 97,5–99 de 83–88 ng/L.</li>
+    <li>Abiramalatha T, Kumar M, Chandran S, et al. Troponin-T as a biomarker in neonates with perinatal asphyxia. <em>J Neonatal Perinat Med</em>. 2017;10:275–80 — a las 2–4 h el 84 % superaba 100 ng/L; medianas de 173 (moderada) y 263 ng/L (grave), 168 en supervivientes y 407 en fallecidos; corte de 190 ng/L para mortalidad (S 82 %, E 80 %).</li>
+    <li>Joseph S, Kumar S, Ahamed MZ, Lakshmi S. Cardiac troponin-T as a marker of myocardial dysfunction in term neonates with perinatal asphyxia. <em>Indian J Pediatr</em>. 2018;85:877–84 — muestra venosa a las 4 h: 61 ± 36 ng/L sin disfunción, 277 ± 231 con disfunción, 378 ± 348 con shock; cortes de 114,5 y 250,5 ng/L.</li>
+    <li>Bischoff AR, Habib S, McNamara PJ, Giesinger RE. Hemodynamic response to milrinone for refractory hypoxemia during therapeutic hypothermia for neonatal HIE. <em>J Perinatol</em>. 2021;41:2345–54.</li>
+  </ol></div></details>`;
+
+  h += `<div class="note slate" style="margin-top:16px"><b>Sobre esta herramienta</b>Apoyo a la decisión, no sustituto del juicio clínico ni de la evaluación a pie de cuna. Los umbrales proceden de cohortes observacionales pequeñas. Adapte a su protocolo institucional.</div>`;
+
+  h += `<div class="acciones">
+    <button class="acc" data-act="imprimir">Imprimir o guardar en PDF</button>
+    <button class="acc" data-act="doc">Enviar a Documents To Go</button>
+    <button data-act="copiar">Copiar informe</button>
+    <button data-act="reset">Empezar un caso nuevo</button>
+  </div>
+  <div class="borrador">El informe .doc se abre y edita en Documents To Go desde la hoja de compartir</div>`;
+  return h;
+}
+
+/* ---------------- Persistencia local ---------------- */
+/* En el visor de artefactos el almacenamiento puede estar bloqueado: todo va
+   envuelto en try/catch y la herramienta funciona igual, solo sin borrador. */
+const CLAVE = 'cdss_ehi_v2';
+let restaurado = null;
+function guardar(){
+  try{ localStorage.setItem(CLAVE, JSON.stringify({t:Date.now(), s:S})); return true; }
+  catch(e){ return false; }
+}
+function restaurar(){
+  try{
+    const r = localStorage.getItem(CLAVE); if(!r) return null;
+    const o = JSON.parse(r);
+    if(!o || !o.s) return null;
+    const algo = Object.keys(o.s).some(k => o.s[k]!=='' && o.s[k]!==0 && o.s[k]!=null && k!=='tropUnit');
+    if(!algo) return null;
+    Object.assign(S, o.s); return o.t;
+  }catch(e){ return null; }
+}
+function borrarGuardado(){ try{ localStorage.removeItem(CLAVE); }catch(e){} }
+
+/* ---------------- Informe exportable ---------------- */
+function fechaHora(){
+  const d = new Date();
+  const p = x => String(x).padStart(2,'0');
+  return `${p(d.getDate())}/${p(d.getMonth()+1)}/${d.getFullYear()} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+function selloArchivo(){
+  const d = new Date(); const p = x => String(x).padStart(2,'0');
+  return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}_${p(d.getHours())}${p(d.getMinutes())}`;
+}
+const ETIQ_FASE = {pre:'Antes del enfriamiento', enfriamiento:'Durante el enfriamiento',
+  recalentamiento:'Recalentamiento', post:'Después del recalentamiento'};
+const ETIQ_SARNAT = {leve:'Leve', moderada:'Moderada', severa:'Severa'};
+
+function filasInforme(){
+  const f = [], put = (k,v,u) => { const x = n(S[k]); if(x!==null) f.push([v, u? `${x} ${u}` : String(x)]); };
+  f.push(['SECCIÓN','Contexto']);
+  put('eg','Edad gestacional','semanas'); put('peso','Peso','kg'); put('horas','Horas de vida','h');
+  if(S.sarnat) f.push(['Estadio de encefalopatía', ETIQ_SARNAT[S.sarnat]]);
+  if(S.fase) f.push(['Fase térmica', ETIQ_FASE[S.fase]]);
+
+  f.push(['SECCIÓN','Nivel 1 · clínico']);
+  put('pas','Presión sistólica','mmHg'); put('pad','Presión diastólica','mmHg');
+  put('pam','Presión media','mmHg'); put('fc','Frecuencia cardíaca','lpm');
+  if(S.llenado) f.push(['Llenado capilar', S.llenado==='menor3'?'≤ 3 s':'> 3 s']);
+  if(S.diuresis) f.push(['Diuresis', {normal:'≥ 1 mL/kg/h', oliguria:'< 1 mL/kg/h', anuria:'Anuria'}[S.diuresis]]);
+  put('spo2pre','SpO₂ preductal','%'); put('spo2post','SpO₂ posductal','%');
+  const g = calcGradiente(); if(g!==null) f.push(['Gradiente pre-posductal', `${g} puntos`]);
+  const oi = calcOI(); if(oi!==null) f.push(['Índice de oxigenación', oi.toFixed(1)]);
+
+  f.push(['SECCIÓN','Nivel 2 · laboratorio']);
+  put('ph','pH'); put('eb','Exceso de base','mmol/L'); put('lactato','Lactato','mmol/L');
+  put('creat','Creatinina','mg/dL');
+  const t = tropNgL(); if(t!==null) f.push(['Troponina T', `${Math.round(t)} ng/L — ${tropBanda(t)[1]}`]);
+  const c = n(S.cortisol); if(c!==null) f.push(['Cortisol basal', `${c} µg/dL — ${cortBanda(c)[1]}`]);
+
+  f.push(['SECCIÓN','Nivel 3 · ecocardiografía']);
+  f.push(['Estudio realizado', S.ecoHecho==='si' ? 'Sí' : 'No disponible']);
+  put('tapse','TAPSE','mm'); put('facvd','FAC del VD','%'); put('fevi','FEVI','%');
+  put('lvoVal','Gasto ventricular izquierdo','mL/kg/min');
+  put('paat','PAAT','ms'); put('rvet','RVET','ms');
+  const pr = calcPaatRvet();
+  if(pr!==null) f.push(['PAAT/RVET', `${pr.toFixed(2)} — ${paatVerdict(pr)[1]} (${paatUmbral().ctx})`]);
+  const dic = {izq_dcha:'Izquierda → derecha', bidireccional:'Bidireccional', dcha_izq:'Derecha → izquierda', na:'No valorable'};
+  if(S.ductus) f.push(['Ductus', {no_restrictivo:'Permeable no restrictivo', restrictivo:'Restrictivo', cerrado:'Cerrado'}[S.ductus]]);
+  if(S.shuntDuctal) f.push(['Cortocircuito ductal', dic[S.shuntDuctal]]);
+  if(S.shuntAuricular) f.push(['Cortocircuito auricular', dic[S.shuntAuricular]]);
+  if(S.septum) f.push(['Septum interventricular', S.septum==='normal'?'Curvatura normal':'Aplanado o en D']);
+  if(S.flujoPulmonar) f.push(['Flujo por válvula pulmonar', S.flujoPulmonar==='presente'?'Presente':'Ausente']);
+  if(S.precarga) f.push(['Llenado ventricular', {adecuada:'Adecuado', baja:'Cavidades subllenas', alta:'Dilatado o sobrecargado'}[S.precarga]]);
+
+  f.push(['SECCIÓN','Nivel 4 · neuromonitoreo']);
+  if(S.nirs && S.nirs!=='no') f.push(['Saturación regional cerebral', {bajo:'Baja (< 55 %)', normal:'Normal (55–85 %)', alto:'Alta (> 85 %)'}[S.nirs]]);
+  const ir = calcIR(); if(ir!==null) f.push(['Índice de resistencia', ir.toFixed(2)]);
+  if(S.aeeg && S.aeeg!=='no') f.push(['Electroencefalografía integrada', {normal:'Normal o continuo', anormal:'Anormal', convulsiones:'Convulsiones'}[S.aeeg]]);
+
+  f.push(['SECCIÓN','Soporte vasoactivo en curso']);
+  [['dopa','Dopamina','µg/kg/min'],['dobu','Dobutamina','µg/kg/min'],['epi','Adrenalina','µg/kg/min'],
+   ['norepi','Noradrenalina','µg/kg/min'],['milri','Milrinona','µg/kg/min'],['vaso','Vasopresina','U/kg/min']]
+   .forEach(([k,l,u])=>{ const x=n(S[k]); if(x) f.push([l, `${x} ${u}`]); });
+  const vis = calcVIS(); if(vis>0) f.push(['Puntuación vasoactiva-inotrópica', vis.toFixed(1)]);
+  const hc = n(S.hcTotal); if(hc) f.push(['Hidrocortisona acumulada', `${hc} mg/kg${hc>=5.6?' — POR ENCIMA del corte de 5,6 mg/kg':''}`]);
+  const hv = n(S.horasVaso); if(hv) f.push(['Duración del soporte', `${hv} h`]);
+  return f;
+}
+
+function informeTexto(){
+  const res = motor(), F = FENOTIPOS[res[0].k];
+  let L = [];
+  L.push('CDSS HEMODINAMIA EHI — INFORME DE EVALUACIÓN');
+  L.push('Generado el ' + fechaHora());
+  L.push('');
+  filasInforme().forEach(([a,b])=>{
+    if(a==='SECCIÓN'){ L.push(''); L.push('— ' + b.toUpperCase() + ' —'); }
+    else L.push('  ' + a + ': ' + b);
+  });
+  L.push(''); L.push('— FENOTIPO DOMINANTE —');
+  L.push('  ' + F.nom); L.push('  ' + F.res);
+  L.push('  Sostenido por:');
+  res[0].ev.forEach(e=>L.push('    · ' + e.replace(/<[^>]+>/g,'')));
+  if(res.length>1){
+    L.push(''); L.push('— ALTERNATIVAS A DESCARTAR —');
+    res.slice(1).forEach(r=>L.push(`  · ${FENOTIPOS[r.k].nom} (concordancia ${r.conf} %)`));
+  }
+  L.push(''); L.push('— CONDUCTA ESCALONADA —');
+  escalones(res[0].k).forEach(t=>{
+    L.push('');
+    L.push(`  Escalón ${t.n}. ${t.t}${t.s?' — '+t.s:''}`);
+    (t.drugs||[]).forEach(d=>L.push(`    · ${d[0]}: ${d[2]}${d[1]?' ('+d[1]+')':''}`));
+    (t.items||[]).forEach(x=>L.push('    · ' + x.replace(/<[^>]+>/g,'')));
+  });
+  L.push('');
+  L.push('Apoyo a la decisión. No sustituye el juicio clínico ni la evaluación a pie de cuna.');
+  L.push('Umbrales procedentes de cohortes observacionales; adapte a su protocolo institucional.');
+  return L.join('\n');
+}
+
+function informeDoc(){
+  const res = motor(), F = FENOTIPOS[res[0].k];
+  const fil = filasInforme().map(([a,b]) => a==='SECCIÓN'
+    ? `<tr><td colspan="2" style="background:#EFE7DA;font-weight:bold;padding:6px 8px;border:1px solid #C9BCA8">${esc(b)}</td></tr>`
+    : `<tr><td style="padding:5px 8px;border:1px solid #C9BCA8;width:45%">${esc(a)}</td><td style="padding:5px 8px;border:1px solid #C9BCA8">${esc(b)}</td></tr>`).join('');
+  const esc2 = x => esc(String(x).replace(/<[^>]+>/g,''));
+  const esca = escalones(res[0].k).map(t=>`
+    <p style="margin:12px 0 4px"><b>Escalón ${esc(t.n)}. ${esc(t.t)}</b>${t.s?` <i>${esc(t.s)}</i>`:''}</p>
+    <ul style="margin:0 0 0 18px">
+      ${(t.drugs||[]).map(d=>`<li><b>${esc(d[0])}</b>: ${esc(d[2])}${d[1]?` <i>(${esc(d[1])})</i>`:''}</li>`).join('')}
+      ${(t.items||[]).map(x=>`<li>${esc2(x)}</li>`).join('')}
+    </ul>`).join('');
+  return `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
+<head><meta charset="utf-8"><title>Informe hemodinámico EHI</title></head>
+<body style="font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#222">
+<h2 style="margin:0">CDSS Hemodinamia EHI — informe de evaluación</h2>
+<p style="margin:2px 0 14px;color:#666">Generado el ${fechaHora()}</p>
+<table style="border-collapse:collapse;width:100%">${fil}</table>
+<h3 style="margin:18px 0 4px">Fenotipo dominante</h3>
+<p style="margin:0"><b>${esc(F.nom)}</b></p>
+<p style="margin:4px 0">${esc(F.res)}</p>
+<p style="margin:8px 0 2px"><i>Sostenido por:</i></p>
+<ul style="margin:0 0 0 18px">${res[0].ev.map(e=>`<li>${esc2(e)}</li>`).join('')}</ul>
+${res.length>1?`<h3 style="margin:16px 0 4px">Alternativas a descartar</h3>
+<ul style="margin:0 0 0 18px">${res.slice(1).map(r=>`<li>${esc(FENOTIPOS[r.k].nom)} — concordancia ${r.conf} %</li>`).join('')}</ul>`:''}
+<h3 style="margin:18px 0 4px">Conducta escalonada</h3>${esca}
+<hr><p style="font-size:9pt;color:#666">Apoyo a la decisión, no sustituto del juicio clínico ni de la evaluación a pie de cuna. Los umbrales proceden de cohortes observacionales pequeñas. Adapte a su protocolo institucional.</p>
+</body></html>`;
+}
+
+async function exportarDoc(){
+  const nombre = `Hemodinamia_EHI_${selloArchivo()}.doc`;
+  const blob = new Blob(['\ufeff' + informeDoc()], {type:'application/msword'});
+  const file = new File([blob], nombre, {type:'application/msword'});
+  try{
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      await navigator.share({files:[file], title:'Informe hemodinámico EHI'});
+      return;
+    }
+  }catch(e){ if(e && e.name==='AbortError') return; }
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = nombre; document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1500);
+}
+
+async function copiarInforme(btn){
+  const txt = informeTexto();
+  try{ await navigator.clipboard.writeText(txt); btn.textContent = 'Informe copiado'; }
+  catch(e){
+    const ta = document.createElement('textarea');
+    ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); btn.textContent='Informe copiado'; }
+    catch(_){ btn.textContent='No se pudo copiar'; }
+    ta.remove();
+  }
+  setTimeout(()=>{ btn.textContent='Copiar informe'; }, 2200);
+}
+
+/* ---------------- Motor de render ---------------- */
+function draw(){
+  const host = document.getElementById('main');
+  try{
+    const p = PASOS[i];
+    host.innerHTML =
+      `<div class="card"><div class="step-tag">${p.tag}</div><h2>${p.t}</h2>${p.l?`<p class="lead">${p.l}</p>`:''}${p.r()}</div>`;
+    document.getElementById('prog').innerHTML =
+      PASOS.map((_,k)=>`<i class="${k===i?'on':(k<i?'done':'')}"></i>`).join('');
+    document.getElementById('btnPrev').disabled = (i===0);
+    const bn = document.getElementById('btnNext');
+    bn.textContent = (i===PASOS.length-2) ? 'Generar fenotipo'
+                   : (i===PASOS.length-1 ? 'Volver a editar' : 'Continuar');
+    if(restaurado && i===0){
+      host.insertAdjacentHTML('beforeend',
+        `<div class="borrador">Borrador restaurado del ${new Date(restaurado).toLocaleString('es')}</div>`);
+    }
+    guardar();
+    try{ window.scrollTo(0,0); }catch(_){}
+  }catch(err){
+    host.innerHTML = `<div class="card"><h2>No se pudo dibujar este paso</h2>
+      <p class="lead">Use «Atrás» para volver al paso anterior y continúe. Detalle técnico:</p>
+      <div class="note red"><b>${esc(err && err.name || 'Error')}</b>${esc(err && err.message || String(err))}</div></div>`;
+  }
+}
+
+/* Delegación de eventos: sin manejadores en línea, que fallan en visores con
+   ámbito aislado o política de seguridad de contenido restrictiva. */
+const main = document.getElementById('main');
+
+main.addEventListener('input', e=>{
+  const el = e.target.closest('[data-k]');
+  if(el) S[el.dataset.k] = el.value;
+});
+
+main.addEventListener('change', e=>{
+  const el = e.target.closest('[data-k]');
+  if(el){ S[el.dataset.k] = el.value; if(i < PASOS.length-1) draw(); }
+});
+
+main.addEventListener('click', e=>{
+  const opt = e.target.closest('[data-set]');
+  if(opt){ setv(opt.dataset.set, opt.dataset.val); return; }
+  const b = e.target.closest('[data-act]');
+  if(!b) return;
+  const a = b.dataset.act;
+  if(a==='reset'){ if(confirm('¿Borrar todos los datos y empezar de nuevo?')){ borrarGuardado(); location.reload(); } return; }
+  if(a==='imprimir'){ try{ window.print(); }catch(_){ alert('La impresión no está disponible en este visor. Abra el archivo en Safari.'); } return; }
+  if(a==='doc'){ exportarDoc(); return; }
+  if(a==='copiar'){ copiarInforme(b); return; }
+});
+
+main.addEventListener('keydown', e=>{
+  if(e.key!=='Enter' && e.key!==' ') return;
+  const opt = e.target.closest('[data-set]');
+  if(opt){ e.preventDefault(); setv(opt.dataset.set, opt.dataset.val); }
+});
+
+document.getElementById('btnNext').addEventListener('click', ()=>{
+  i = (i===PASOS.length-1) ? 0 : i+1;
+  draw();
+});
+document.getElementById('btnPrev').addEventListener('click', ()=>{ if(i>0){ i--; draw(); } });
+
+restaurado = restaurar();
+draw();
+
+/* Trabajador de servicio para uso sin conexión. Solo se registra si el archivo
+   se sirve por HTTPS; desde file:// o dentro de un visor se ignora en silencio. */
+if('serviceWorker' in navigator && location.protocol === 'https:'){
+  window.addEventListener('load', ()=>{
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+</script>
+
+<footer>CDSS Hemodinamia EHI · construido sobre Surak <em>et al.</em> 2025 y 11 fuentes complementarias · agosto 2026</footer>
+</body>
+</html>
